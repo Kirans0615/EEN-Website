@@ -618,115 +618,88 @@
     }
 }
 
-.quote-section {
+
+.hero {
     display: flex;
     justify-content: space-between;
-    align-items: stretch; /* Ensures that children stretch to fill the section */
-    background-color: #131313;
+    align-items: center;
+    padding: 50px;
+    background-image: url('PICS/bridge.JPG');
+    color: white;
 }
 
-.form-container, .image-container {
-    flex: 1; /* Each container takes equal space */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centers content vertically in each container */
-    height: 770px; /* Fixed height for both containers */
+.content {
+    flex: 1;
+    padding: 20px;
 }
 
 .form-container {
-    background-image: url('/PICS/background.jpg');
+    flex: 1;
+    padding: 20px;
+    background-image: url('/PICS/building.JPG');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 20px;
     border-radius: 10px;
-    color: white;
-    height: 740px;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
 }
 
-form {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
+.form {
+    display: flexs;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-select {
-    padding: 10px;
-    margin-right: 10px;
-    flex: 1;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    min-width: 0;
+input[type="text"], input[type="email"], select {
+    width: 100%; /* Makes input fields take up full container width */
+    padding: 10px; /* Comfortable padding inside inputs */
+    margin-bottom: 10px; /* Space between inputs */
+    border: 1px solid #ccc; /* Subtle border styling */
+    border-radius: 4px; /* Rounded corners on inputs */
 }
 
 button {
-    padding: 10px;
-    background-color: #696969; /* Color to match your brand */
+    background: linear-gradient(45deg, #696969, #C0C0C0); /* Gradient background for buttons */
     color: white;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 button:hover {
-    background-color: #4837ff; /* Darker blue on hover */
+    background-color: #4837ff;
 }
 
-.image-container {
-    padding: 20px;
+.services {
+    padding: 50px 0;
+    background-color: #131313;
 }
 
-.image-container img {
-    width: 100%;
-    height: 100%; /* Adjusts the height to fill the container */
-    object-fit: cover; /* Ensures the image covers the container without distortion */
-}
-
-.input-field, select {
-    background: rgba(255, 255, 255, 0.1); /* Darker background for contrast */
-    border: 1px solid #fff; /* White border for aesthetic */
-    outline: none; /* Removes the outline on focus */
-    border-radius: 5px; /* Rounded corners for modern design */
-    margin-bottom: 15px;
-    padding: 15px; /* More padding for better text entry */
-    width: 100%; /* Adjusts width to fill the container */
-    color: white; /* White text for better visibility */
-    font-size: 16px; /* Increases font size for readability */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Subtle shadow for depth */
-}
-
-.submit-button {
-    background-color: #ff4500; /* Orangish-red color for the button, can adjust to fit brand */
+.footer__container {
+    background-color: #131313;
     color: white;
-    padding: 15px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-    width: 100%; /* Ensures the button fills the width of the form */
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-around;
 }
 
 h2 {
-    color: #fff; /* Keeps color white for visibility */
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 40px; /* Larger font size for visibility */
+    background: linear-gradient(to right, #fff, #708090); /* Gradient effect */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 20px 0; /* Adds vertical spacing */
+    text-align: center; /* Centers the header text */
 }
 
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .get-quote-header {
+        font-size: 18px; /* Slightly smaller font for mobile devices */
+    }
 }
-
-
-
-
-  
-
-
