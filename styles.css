@@ -74,6 +74,8 @@
     align-items: center;
     padding: 0 1rem;
     width: 100%;
+    background-color: transparent;
+    
 }
 
 .button {
@@ -88,7 +90,23 @@
    outline: none;
    border-radius: 4px;
    background: #696969;
+   background-color: transparent;
    color: #fff; 
+   border: 2px solid white;
+}
+
+.button-transparent {
+    background-color: transparent; /* Makes the background see-through */
+    color: white; /* Sets the text color */
+    border: 2px solid white; /* Adds a white border around the button */
+    padding: 10px 20px; /* Adds space inside the button */
+    text-align: center; /* Centers the text inside the button */
+    text-decoration: none; /* Removes underline from text */
+    display: inline-block; /* Allows setting dimensions */
+    font-size: 16px; /* Sets the font size */
+    margin: 4px 2px; /* Adds margin around the button */
+    cursor: pointer; /* Changes the mouse cursor to a pointer on hover */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
 }
 
 .button:hover {
@@ -599,3 +617,116 @@
         width: 100%;
     }
 }
+
+.quote-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Ensures that children stretch to fill the section */
+    background-color: #131313;
+}
+
+.form-container, .image-container {
+    flex: 1; /* Each container takes equal space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically in each container */
+    height: 770px; /* Fixed height for both containers */
+}
+
+.form-container {
+    background-image: url('/PICS/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    height: 740px;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    padding: 10px;
+    margin-right: 10px;
+    flex: 1;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    min-width: 0;
+}
+
+button {
+    padding: 10px;
+    background-color: #696969; /* Color to match your brand */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4837ff; /* Darker blue on hover */
+}
+
+.image-container {
+    padding: 20px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%; /* Adjusts the height to fill the container */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+}
+
+.input-field, select {
+    background: rgba(255, 255, 255, 0.1); /* Darker background for contrast */
+    border: 1px solid #fff; /* White border for aesthetic */
+    outline: none; /* Removes the outline on focus */
+    border-radius: 5px; /* Rounded corners for modern design */
+    margin-bottom: 15px;
+    padding: 15px; /* More padding for better text entry */
+    width: 100%; /* Adjusts width to fill the container */
+    color: white; /* White text for better visibility */
+    font-size: 16px; /* Increases font size for readability */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+}
+
+.submit-button {
+    background-color: #ff4500; /* Orangish-red color for the button, can adjust to fit brand */
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 100%; /* Ensures the button fills the width of the form */
+}
+
+h2 {
+    color: #fff; /* Keeps color white for visibility */
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+
+
+  
+
+
