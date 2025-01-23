@@ -619,87 +619,113 @@
 }
 
 
-.hero {
+/* Resets */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.image-container {
+    background-color: #131313;
+}
+.content-container {
+    position: relative;
+    max-width: 100%; /* Cover full width */
+    height: 100vh;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px;
-    background-image: url('PICS/bridge.JPG');
-    color: white;
-}
-
-.content {
-    flex: 1;
-    padding: 20px;
-}
-
-.form-container {
-    flex: 1;
-    padding: 20px;
-    background-image: url('/PICS/building.JPG');
+    align-items: center; /* Center vertically */
+    justify-content: flex-end; /* Align the form to the right */
+    background: url('/PICS/background.JPG') no-repeat right center; /* Adjust this path */
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 10px;
-    display: grid;
+    padding-right: 10%;
 }
 
-.form {
-    display: flexs;
+.elementor-form-fields-wrapper {
+    width: 35%; /* Increase form width */
+    background-color: rgba(0, 0, 0, 0.75); /* Slight transparency */
+    padding: 40px; /* More padding for better spacing */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    color: #fff;
 }
-
-input[type="text"], input[type="email"], select {
-    width: 100%; /* Makes input fields take up full container width */
-    padding: 10px; /* Comfortable padding inside inputs */
-    margin-bottom: 10px; /* Space between inputs */
-    border: 1px solid #ccc; /* Subtle border styling */
-    border-radius: 4px; /* Rounded corners on inputs */
-}
-
-button {
-    background: linear-gradient(45deg, #696969, #C0C0C0); /* Gradient background for buttons */
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-button:hover {
-    background-color: #4837ff;
-}
-
-.services {
-    padding: 50px 0;
-    background-color: #131313;
-}
-
-.footer__container {
-    background-color: #131313;
-    color: white;
-    padding: 40px 20px;
-    display: flex;
-    justify-content: space-around;
-}
-
-h2 {
-    font-size: 40px; /* Larger font size for visibility */
-    background: linear-gradient(to right, #fff, #708090); /* Gradient effect */
+.form-title {
+    background-color: #696969;
+    background-image: linear-gradient(to right,
+    #696969 0%,
+    #F8F8FF 0%, 
+    #708090 21%, 
+    #FFF5EE 52%, 
+    #FFEFD5 78%, 
+    #FDF5E6 100% 
+    );
+    background-size: 100%;
+    margin-bottom: 30px;
+    font-size: 30px;
     -webkit-background-clip: text;
+    -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin: 20px 0; /* Adds vertical spacing */
-    text-align: center; /* Centers the header text */
+    -moz-text-fill-color: transparent;
 }
 
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    width: 100%;
+    padding: 18px; /* Larger padding for input fields */
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
 
-/* Responsive adjustments */
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row select,
+.form-row input[type="text"] {
+    flex: 1;
+    color: #fff;
+}
+
+.elementor-button {
+    width: 100%;
+    background-color: #004494;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: 0.3s ease;
+}
+
+.elementor-button:hover {
+    background-color: #003073;
+}
+
+@media (max-width: 1200px) {
+    .elementor-form-fields-wrapper {
+        width: 50%; /* Increase form width on smaller screens */
+    }
+}
+
 @media (max-width: 768px) {
-    .form-container {
-        padding: 1rem;
-        margin: 1rem;
+    .content-container {
+        justify-content: center;
+        padding-right: 0; /* Remove right padding */
     }
 
-    .get-quote-header {
-        font-size: 18px; /* Slightly smaller font for mobile devices */
+    .elementor-form-fields-wrapper {
+        width: 75%; /* Further increase form width on very small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .form-row {
+        flex-direction: column; /* Stack state and zip code vertically on small devices */
     }
 }
