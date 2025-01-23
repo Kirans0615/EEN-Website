@@ -2,8 +2,9 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Cantarell', 'Helvetica Neue', sans-serif;
 }
+
 
 .navbar {
     background: #131313;
@@ -95,6 +96,35 @@
    border: 2px solid white;
 }
 
+.left-text {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    color: white;
+    z-index: 2; /* Ensure it's above the background image */
+    display: block;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+.left-text h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.left-text p {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@media (max-width: 1200px) {
+    .left-text {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
 .button-transparent {
     background-color: transparent; /* Makes the background see-through */
     color: white; /* Sets the text color */
@@ -110,7 +140,7 @@
 }
 
 .button:hover {
-    background: #4837ff;
+    background: #004494;
     transition: all 0.3s ease;
 }
 
@@ -389,7 +419,7 @@
     #FDF5E6 100% 
     );
     background-size: 100%;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
     font-size: 2.5rem;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -405,7 +435,7 @@
 
 .services__card {
     margin: 1rem;
-    height: 525px;
+    height: 555px;
     width: 400px;
     border-radius: 4px;
     background-image: linear-gradient(
@@ -425,12 +455,12 @@
         rgba(0, 0, 0, 0) 0%,
         rgba(17, 17, 17, 0.6) 100%
         ), 
-        url('/PICS/pic3.jpg');
+        url('/PICS/family.jpg');
 }
 
 .services h2 {
     position: absolute;
-    top: 350px;
+    top: 330px;
     left: 30px;
 }
 
@@ -700,12 +730,25 @@ select {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    background-color: 0.3s ease;
+    transition: background-color 0.3s ease; /* Corrected property name for transition */
+    position: relative; /* Needed for positioning the pseudo-element */
+}
+
+.elementor-button::after {
+    content: ' ➔'; /* Arrow symbol */
+    display: inline-block;
+    margin-left: 10px; /* Space between text and arrow */
+    transition: transform 0.3s ease; /* Smooth transformation on hover */
 }
 
 .elementor-button:hover {
     background-color: #003073;
 }
+
+.elementor-button:hover::after {
+    transform: translateX(5px); /* Move the arrow to the right on hover */
+}
+
 
 @media (max-width: 1200px) {
     .elementor-form-fields-wrapper {
@@ -728,4 +771,8 @@ select {
     .form-row {
         flex-direction: column; /* Stack state and zip code vertically on small devices */
     }
+}
+
+h1 { 
+    padding: 20px;
 }
