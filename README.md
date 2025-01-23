@@ -12,6 +12,8 @@ Insert indexmain.html into a html file inside vscode - title it indexmain.html
 
 Insert style.css into css file into vscode - title it style.css
 
+download are the pictures inside PICS and verify the names are the same 
+
 Verify you have "Prettier" and "Live Server" installed on Vscode
 
 Go into your indexmain.html file right click and select launch with live server
