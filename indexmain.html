@@ -3,66 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empower Estates Network</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a705a48688.js" crossorigin="anonymous"></script>
-
+    <title>Your Page Title</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your external CSS file -->
 </head>
 <body>
-   <nav class="navbar">
-       <div class="navbar__container">
-           <a href="/">
-               <img src="PICS/final just logo.PNG" width="120" alt="Empower Estates Network Logo">
-           </a>
-           <div class="navbar__toggle" id="mobile-menu">
-               <span class="bar"></span>
-               <span class="bar"></span>
-               <span class="bar"></span>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Empower Estates Network</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a705a48688.js" crossorigin="anonymous"></script>
+    
+    </head>
+    <body>
+       <nav class="navbar">
+           <div class="navbar__container">
+               <a href="/">
+                   <img src="PICS/final just logo.PNG" width="120" alt="Empower Estates Network Logo">
+               </a>
+               <div class="navbar__toggle" id="mobile-menu">
+                   <span class="bar"></span>
+                   <span class="bar"></span>
+                   <span class="bar"></span>
+               </div>
+               <ul class="navbar__menu">
+                   <li class="navbar__item">
+                       <a href="/" class="navbar__links">Home</a>
+                   </li>
+                   <li class="navbar__item">
+                       <a href="/buy.html" class="navbar__links">Buy</a>
+                   </li>
+                   <li class="navbar__item">
+                       <a href="/sell.html" class="navbar__links">Sell</a>
+                   </li>
+                   <li class="navbar__item">
+                       <a href="/contact-us.html" class="navbar__links">Contact Us</a>
+                   </li>
+                   <li class="navbar__item">
+                       <a href="/about.html" class="navbar__links">About Us</a>
+                   </li>
+                   <li class="navbar__btn">
+                       <a href="/register.html" class="button">Register/Sign In</a>
+                   </li>
+               </ul>
            </div>
-           <ul class="navbar__menu">
-               <li class="navbar__item">
-                   <a href="/" class="navbar__links">Home</a>
-               </li>
-               <li class="navbar__item">
-                   <a href="/buy.html" class="navbar__links">Buy</a>
-               </li>
-               <li class="navbar__item">
-                   <a href="/sell.html" class="navbar__links">Sell</a>
-               </li>
-               <li class="navbar__item">
-                   <a href="/contact-us.html" class="navbar__links">Contact Us</a>
-               </li>
-               <li class="navbar__item">
-                   <a href="/about.html" class="navbar__links">About Us</a>
-               </li>
-               <li class="navbar__btn">
-                   <a href="/register.html" class="button">Register/Sign In</a>
-               </li>
-           </ul>
-       </div>
-   </nav>
-
-   <div class="hero">
-    <div class="content">
-        <h1>Empowering The Community One Property At a Time</h1>
-        <p>We understand the challenges of selling a home. EEN cuts through the red tape and helps you sell your house fast.</p>
-        <button>Learn More</button>
-    </div>
-    <div class="form-container">
-        <h2>Get An Instant Quote</h2>
-        <form>
-    <div class="address">
-                <input type="text" placeholder="1234 Test Rd" name="address">
-            </div>
-    <div class="city">
-                <input type="text" placeholder="City" name="city">
-            </div>
-            
-    <div class="state">
-            <select name="state">
+       </nav>
+    
+       <div class="content-container" style="background-image: url('/PICS/signdeal.jpg');">
+        <form action="#" method="POST" class="elementor-form-fields-wrapper">
+            <h2 class="form-title">Get An Instant Quote</h2>
+            <input type="text" name="address" id="form-field-address" placeholder="1234 Test Rd" required>
+            <input type="text" name="city" id="form-field-city" placeholder="City" required>
+            <div class="form-row">
+                <select name="state" id="form-field-state" required>
                     <option value="">Select State</option>
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
@@ -115,109 +113,104 @@
                     <option value="WI">Wisconsin</option>
                     <option value="WY">Wyoming</option>
                 </select>
+                <input type="text" name="zip_code" id="form-field-zip_code" placeholder="Zip Code" required>
             </div>
-    <div class="zip">
-                <input type="text" placeholder="Zip Code" name="zip">
-            </div>
-     <div class="name">
-                <input type="text" placeholder="Name" name="name">
-            </div>
-    <div class="email">
-                <input type="email" placeholder="Email Address" name="email">
-            </div>
-    <div class="phone">
-                <input type="tel" placeholder="Phone" name="phone">
-            </div>
-    <div class="how">
-                <select name="how">
-                    <option value="">How Did You Find Us?</option>
-                    <option value="Google Search">Google Search</option>
-                    <option value="Customer Referral">Customer Referral</option>
-                    <option value="Employee Referral">Employee Referral</option>
-                    <option value="Other">Other</option>
-                </select>
-            </div>
-            <div>
-                <button type="submit">Get My Free Offer</button>
-            </div>
+            <input type="text" name="name" id="form-field-name" placeholder="Name" required>
+            <input type="tel" name="phone" id="form-field-phone" placeholder="Phone" required>
+            <input type="email" name="email" id="form-field-email" placeholder="Email Address" required>
+            <select name="how" id="form-field-how" required>
+                <option value="">How Did You Find Us?</option>
+                <option value="Google Search">Google Search</option>
+                <option value="Customer Referral">Customer Referral</option>
+                <option value="Employee Referral">Employee Referral</option>
+                <option value="Other">Other</option>
+                
+                <!-- Add other options as needed -->
+            </select>
+            <button type="submit" class="elementor-button">GET MY FREE OFFER</button>
         </form>
+    </div>    
+        </div>
+        <div class="image-container">
+            <img src="path/to/your/image.jpg" alt="Descriptive Alt Text" style="max-width: 50%;">
+        </div>
     </div>
-</div>
-
-   <!-- Services Section -->
-   <div class="services">
-       <h1>Sell Your Home on Your Terms</h1>
-       <div class="services__container">
-           <div class="services__card">
-               <h2>How We Work</h2>
-               <p>Reputable Partners</p>
-               <button>Get a Cash Offer Today</button>
-           </div>
-           <div class="services__card">
-               <h2>Empowering The Community One Property At a Time</h2>
-               <p>Testimonials</p>
-               <button>Meet the Team</button>
-           </div>
-       </div>
-   </div>
-
-   <!-- Footer Section -->
-   <div class="footer__container">
-       <div class="footer__links">
-           <div class="footer__link--wrapper">
-               <div class="footer__link--items">
-                   <h2>About Us</h2>
-                   <a href="/sign_up">How We Work</a>
-                   <a href="/">Testimonials</a>
-                   <a href="/">Careers</a>
-                   <a href="/">Investments</a>
-                   <a href="/">Terms of Service</a>
+    
+       <!-- Services Section -->
+       <div class="services">
+           <h1>Sell Your Home on Your Terms</h1>
+           <div class="services__container">
+               <div class="services__card">
+                   <h2>How We Work</h2>
+                   <p>Reputable Partners</p>
+                   <button>Get a Cash Offer Today</button>
                </div>
-               <div class="footer__link--items">
-                   <h2>Contact Us</h2>
-                   <a href="mailto:kirans0615@gmail.com">Email</a>
-                   <a href="https://www.linkedin.com/in/kiran-sen/">LinkedIn</a>
-                   <a href="https://www.instagram.com/kiran_sennn/">Instagram</a>
-               </div>
-               <div class="footer__link--items">
-                   <h2>Social Media</h2>
-                   <a href="/">Instagram</a>
-                   <a href="/">Facebook</a>
-                   <a href="/">YouTube</a>
-                   <a href="/">Twitter</a>
+               <div class="services__card">
+                   <h2>Empowering The Community One Property At a Time</h2>
+                   <p>Testimonials</p>
+                   <button>Meet the Team</button>
                </div>
            </div>
        </div>
-       <div class="social__media">
-           <div class="social__media--wrap">
-               <div class="footer__logo">
-                <a href="/" id="footer__logo">
-                    <img src="PICS/pic5.PNG" alt="Empower Estates Network" style="height: 50px; width: auto;">
-                    <span style="display: none;">Empower Estates Network</span>
-                </a>
-                               </div>
-               <p class="website__rights">© EEN 2025. All Rights Reserved</p>
-               <div class="social__icons">
-                   <a href="/" class="social__icon--link" target="_blank">
-                       <i class="fa brands fa-facebook-f"></i>
-                   </a>
-                   <a href="/" class="social__icon--link" target="_blank">
-                       <i class="fab fa-instagram"></i>
-                   </a>
-                   <a href="/" class="social__icon--link" target="_blank">
-                       <i class="fab fa-twitter"></i>
-                   </a>
-                   <a href="/" class="social__icon--link" target="_blank">
-                       <i class="fab fa-linkedin"></i>
-                   </a>
-                   <a href="/" class="social__icon--link" target="_blank">
-                       <i class="fab fa-youtube"></i>
-                   </a>
+    
+       <!-- Footer Section -->
+       <div class="footer__container">
+           <div class="footer__links">
+               <div class="footer__link--wrapper">
+                   <div class="footer__link--items">
+                       <h2>About Us</h2>
+                       <a href="/sign_up">How We Work</a>
+                       <a href="/">Testimonials</a>
+                       <a href="/">Careers</a>
+                       <a href="/">Investments</a>
+                       <a href="/">Terms of Service</a>
+                   </div>
+                   <div class="footer__link--items">
+                       <h2>Contact Us</h2>
+                       <a href="mailto:kirans0615@gmail.com">Email</a>
+                       <a href="https://www.linkedin.com/in/kiran-sen/">LinkedIn</a>
+                       <a href="https://www.instagram.com/kiran_sennn/">Instagram</a>
+                   </div>
+                   <div class="footer__link--items">
+                       <h2>Social Media</h2>
+                       <a href="/">Instagram</a>
+                       <a href="/">Facebook</a>
+                       <a href="/">YouTube</a>
+                       <a href="/">Twitter</a>
+                   </div>
+               </div>
+           </div>
+           <div class="social__media">
+               <div class="social__media--wrap">
+                   <div class="footer__logo">
+                    <a href="/" id="footer__logo">
+                        <img src="PICS/pic5.PNG" alt="Empower Estates Network" style="height: 50px; width: auto;">
+                        <span style="display: none;">Empower Estates Network</span>
+                    </a>
+                                   </div>
+                   <p class="website__rights">© EEN 2025. All Rights Reserved</p>
+                   <div class="social__icons">
+                       <a href="/" class="social__icon--link" target="_blank">
+                           <i class="fa brands fa-facebook-f"></i>
+                       </a>
+                       <a href="/" class="social__icon--link" target="_blank">
+                           <i class="fab fa-instagram"></i>
+                       </a>
+                       <a href="/" class="social__icon--link" target="_blank">
+                           <i class="fab fa-twitter"></i>
+                       </a>
+                       <a href="/" class="social__icon--link" target="_blank">
+                           <i class="fab fa-linkedin"></i>
+                       </a>
+                       <a href="/" class="social__icon--link" target="_blank">
+                           <i class="fab fa-youtube"></i>
+                       </a>
+                   </div>
                </div>
            </div>
        </div>
-   </div>
-
-   <script src="app.js"></script>
-</body>
-</html>
+    
+       <script src="app.js"></script>
+    </body>
+    </html>
+    
