@@ -1,0 +1,713 @@
+* {
+    box-sizing: border-box;
+    background-color: #131313;
+    margin: 0;
+    padding: 0;
+    font-family: 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Cantarell', 'Helvetica Neue', sans-serif;
+}
+
+
+.navbar {
+    background: #131313;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+#navbar__logo {
+    background-color: #DCDCDC;
+    background-image: linear-gradient(to top, #A9A9A9 0%, #F0FFFF 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.fa-gem {
+    margin-right: 0.5rem;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar__item {
+    height: 80px;
+}
+
+.navbar__links {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+.navbar__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+    background-color: transparent;
+    
+}
+
+.button {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-decoration: none;
+   padding: 10px 20px;
+   height: 100%;
+   width: 100%;
+   border: none;
+   outline: none;
+   border-radius: 4px;
+   background: #696969;
+   background-color: transparent;
+   color: #fff; 
+   border: 2px solid white;
+}
+
+
+
+.button-transparent {
+    background-color: transparent; /* Makes the background see-through */
+    color: white; /* Sets the text color */
+    border: 2px solid white; /* Adds a white border around the button */
+    padding: 10px 20px; /* Adds space inside the button */
+    text-align: center; /* Centers the text inside the button */
+    text-decoration: none; /* Removes underline from text */
+    display: inline-block; /* Allows setting dimensions */
+    font-size: 16px; /* Sets the font size */
+    margin: 4px 2px; /* Adds margin around the button */
+    cursor: pointer; /* Changes the mouse cursor to a pointer on hover */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+.button:hover {
+    background: #004494;
+    transition: all 0.3s ease;
+}
+
+.navbar__links:hover {
+    color: #696969;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 960px) {
+    .navbar__container {
+        display: flex;
+        justify-content: space-between;
+        height: 60px;
+        z-index: 1;
+        width: 99%;
+        max-width: 1300px;
+        padding: 0;
+    }
+
+    .navbar__menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0;
+        transition: all 0.5s ease;
+        height: 72vh;
+        z-index: -1;
+        background: #131313;
+    }
+
+    .navbar__menu.active {
+        background: #131313;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 72vh;
+        font-size: 1.3rem;
+    }
+
+    #navbar__logo {
+        padding-left: 25px;
+    }
+
+    .navbar__toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    }
+
+    .navbar__item {
+        width: 100%;
+    }
+
+    .navbar__links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    .navbar__btn {
+        padding-bottom: 2rem;
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 55%;
+        height: 60px;
+        margin: 0;
+    }
+
+    .navbar__toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;   
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);   
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);   
+    }
+}
+
+
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+    .main__container {
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-self: center;
+        width: 100%;
+        margin: 0 auto;
+        height: 90vh;
+    }
+
+    .main__content {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .main__content h1 {
+        font-size: 2.5rem;
+        margin-top: 2rem;
+    }
+
+    .main__content h2 {
+        font-size: 3rem;   
+    }
+
+    .main__content p {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main__content h1 {
+        font-size: 2rem;
+        margin-top: 3rem;
+    }
+
+    .main__content h2 {
+        font-size: 2rem;   
+    }
+
+    .main__content p {
+        margin-top: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .main__btn {
+        padding: 12px 36px;
+        margin: 2.5rem 0;
+    }
+}
+
+/* Services Section CSS */
+.services {
+    background: #141414;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.services h1 {
+    background-color: #696969;
+    background-image: linear-gradient(to right,
+    #696969 0%,
+    #F8F8FF 0%, 
+    #708090 21%, 
+    #FFF5EE 52%, 
+    #FFEFD5 78%, 
+    #FDF5E6 100%);
+    background-size: 100%;
+    margin-bottom: 3rem;
+    margin-top: 10rem;
+    font-size: 2.5rem;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.services__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.services__card {
+    height: 390px;
+    width: 350px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 50px;
+    position:relative;
+    text-align: left;
+}
+
+/* Card-specific background images */
+.services__card:nth-child(1) {
+    background-image: url('/PICS/background.JPG');
+}
+
+.services__card:nth-child(2) {
+    background-image: url('/PICS/houseback.jpg');
+}
+
+.services__card:nth-child(3) {
+    background-image: url('/PICS/bridge.JPG');
+}
+
+.services__card:nth-child(4) {
+    background-image: url('/PICS/building.JPG');
+}
+
+/* Ensure no unwanted black boxes are behind the text */
+.services__card h2,
+.services__card p {
+    background: none; /* Removes any background color */
+    margin: 0;
+    padding: 5px;
+}
+
+.services__card h2 {
+    font-size: 1.5rem;
+    color: white; /* Ensures the text is visible */
+}
+
+.services__card p {
+    font-size: 1rem;
+    color: white; /* Ensures the text is visible */
+    margin-bottom: 5px; /* Adds space below text */
+}
+
+/* Button styling */
+.services__card button {
+    color: white;
+    padding: 10px 20px;
+    background: #696969;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: auto; /* Push button to bottom of the card */
+}
+
+.services__card:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+    .services__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services__card {
+        width: 90%; /* Adjust width for smaller screens */
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .services {
+        height: auto; /* Adjust height for responsiveness */
+    }
+
+    .services h1 {
+        font-size: 2rem;
+        margin-top: 5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .services h1 {
+        font-size: 1.2rem;
+    }
+
+    .services__card {
+        width: 300px;
+    }
+}
+
+
+
+
+/*Footer CSS */
+
+.footer__container {
+    background-color: #141414;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer__logo {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.footer__links {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer__link--wrapper {
+    display: flex;
+}
+
+.footer__link--items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 16px;
+    text-align: left;
+    width: 160px;
+    box-sizing: border-box;
+}
+
+.footer__link--items h2 {
+    margin-bottom: 16px;
+}
+
+.footer__link--items > h2 {
+    color: #fff;
+}
+
+.footer__link--items a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+.footer__link--items a:hover {
+    color: #e9e9e9;
+    transition: 0.3s ease-out;
+}
+
+/* Social Icons */
+.social__icon--link {
+    color: #fff;
+    font-size: 24px;
+}
+
+.social__media {
+    max-width: 1000px;
+    width: 100%;
+}
+
+.social__media--wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+}
+
+.social__icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 240px;
+}
+
+.social__logo {
+    color: #fff;
+    justify-self: flex-start;
+    margin-left: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.website__rights {
+    color: #fff
+}
+
+@media screen and (max-width: 820px) {
+    .footer__links {
+        padding-top: 2rem;
+    }
+
+    #footer__logo {
+        margin-bottom: 2rem;
+    }
+
+    .website__rights {
+        margin-bottom: 2rem;
+    }
+
+    .footer__link--wrapper {
+        flex-direction: column;
+    }
+
+    .social__media--wrap {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer__link--items {
+        margin: 0;
+        padding: 10px;
+        width: 100%;
+    }
+}
+
+/* Buy Section */
+.buy-section {
+    background-image: url('/PICS/building.JPG'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax effect */
+    text-align: left;
+    transition: 0.4s;
+    padding: 80px 20px;
+    color: #fff;
+    position: relative;
+}
+
+/* Overlay to improve text readability */
+.buy-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2); /* Semi-transparent black overlay */
+    z-index: 1;
+}
+
+/* Section Content */
+.buy-section h1,
+.buy-section p,
+.buy-section h2,
+.buy-section ul li,
+.buy-card p,
+.buy-section h3 {
+    background: none; /* Removes any background */
+    background-color: transparent; /* Ensures no background color */
+    color: #fff;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.buy-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+.buy-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+.buy-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.buy-section ul {
+    margin: 20px 0;
+    padding-left: 50px;
+    list-style-type: disc;
+    color: #fff;
+    background: none;
+}
+.buy-section ul li {
+    margin-bottom: 10px;
+    line-height: 1.4;
+    font-size: 16px;
+    background: none;
+}
+
+.buy-section ul li::marker {
+    font-size: 1.5rem;
+    color: #696969;
+}
+.buy-section ul li:hover {
+    color: #004494;
+    cursor: pointer;
+}
+
+.buy-section h1 span,
+.buy-section h2 span,
+.buy-section h3 span {
+    background-color: #DCDCDC;
+    background-image: linear-gradient(to top, #A9A9A9 0%, #F0FFFF 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    cursor: pointer;
+}
+
+.buy-section p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.8;
+    color: #f0f0f0;
+}
+
+.buy-details {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.buy-card {
+    background: rgba(30, 30, 30, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buy-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+    color: #e9e9e9;
+}
+
+.buy-card p {
+    font-size: 1rem;
+    margin-bottom: 50px;
+    color: #ccc;
+}
+
+.buy-details button {
+    background-color: #708090;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+    width: auto;
+    align-self: center; /* Ensures buttons are centered within their card */
+}
+
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .buy-section h1 {
+        font-size: 2rem;
+    }
+
+    .buy-card {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .buy-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .buy-card {
+        width: 100%;
+    }
+
+    .buy-card h2 {
+        font-size: 1.2rem;
+    }
+}
