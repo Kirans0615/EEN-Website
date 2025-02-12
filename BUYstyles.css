@@ -17,6 +17,10 @@
     position: sticky;
     top: 0;
     z-index: 999;
+    font-weight: 200;
+    font-style: normal;
+    font-family: "Hubot Sans", serif;
+    text-align: center;
 }
 
 .navbar__container {
@@ -281,6 +285,9 @@
     flex-direction: column;
     align-items: center;
     padding: 20px 0;
+    font-weight: 200;
+    font-style: normal;
+    font-family: "Hubot Sans", serif;
 }
 
 .services h1 {
@@ -307,73 +314,108 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
+    font-weight: 200;
+    font-style: normal;
+    font-family: "Hubot Sans", serif;
 }
 
 .services__card {
-    height: 390px;
+    height: 350px;
     width: 350px;
     border-radius: 10px;
-    background-size: cover;
-    background-position: center;
+    background-color: #131313; /* Uniform black background */
+    border: 1px solid #FFFFFF; /* Wide white border */
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    padding: 50px;
-    position:relative;
-    text-align: left;
+    justify-content: space-around;
+    padding: 30px;
+    position: relative;
+    text-align: center;
+    font-weight: 200;
+    font-style: normal;
+    font-family: "Hubot Sans", serif;
+    animation: fadeIn 1s ease-out forwards;
+    transition: transform 0.7s ease-in-out;
+    margin-bottom: 100px;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-/* Card-specific background images */
+/* Adding a slight delay to each card's animation to enhance the effect */
 .services__card:nth-child(1) {
-    background-image: url('/PICS/background.JPG');
+    animation-delay: 0.4s; /* Delay for the first card */
 }
 
 .services__card:nth-child(2) {
-    background-image: url('/PICS/houseback.jpg');
+    animation-delay: 0.4s; /* Increased delay for the second card */
 }
 
 .services__card:nth-child(3) {
-    background-image: url('/PICS/bridge.JPG');
+    animation-delay: 0.4s; /* Further delay for the third card */
 }
 
-.services__card:nth-child(4) {
-    background-image: url('/PICS/building.JPG');
+
+
+/* Removed the before pseudo-element */
+.services__card::before {
+    display: none; /* No background images, not needed */
 }
 
-/* Ensure no unwanted black boxes are behind the text */
-.services__card h2,
-.services__card p {
-    background: none; /* Removes any background color */
-    margin: 0;
-    padding: 5px;
-}
-
+/* Text styling remains consistent */
 .services__card h2 {
-    font-size: 1.5rem;
-    color: white; /* Ensures the text is visible */
+    color: white;
+    background-color: #131313;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 400;
+    font-style: normal;
+    font-family: "Hubot Sans", serif;
 }
 
 .services__card p {
-    font-size: 1rem;
-    color: white; /* Ensures the text is visible */
-    margin-bottom: 5px; /* Adds space below text */
+    color: white;
+    background-color: #131313;
+    margin-bottom: 20px;
+    margin-top: 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 200;
+    font-style: normal;
+    font-family: "Hubot Sans", serif;
 }
 
 /* Button styling */
 .services__card button {
     color: white;
-    padding: 10px 20px;
-    background: #696969;
-    border: none;
-    border-radius: 4px;
+    padding: 12px 24px;
+    background-color: #131313;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
     cursor: pointer;
-    margin-top: auto; /* Push button to bottom of the card */
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 20px auto; /* Center button */
+    display: block;
+    font-weight: 100;
+    font-style: normal;
+    font-family: "Hubot Sans", serif;
 }
 
-.services__card:hover {
-    transform: scale(1.05);
-    transition: 0.3s ease-in-out;
+.services__card button:hover {
+    background-color: #004494;
+    z-index: 2;
+    transition: 0.3s ease-out;
 }
 
 @media screen and (max-width: 768px) {
@@ -404,11 +446,146 @@
     }
 
     .services__card {
-        width: 300px;
+        width: 300px; /* Adjust width for very small screens */
     }
 }
 
+.why-choose-een {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 10%;
+    background-color: #131313;
+    font-size: 3rem;
+    font-weight: normal;
+    font-family: "Hubot Sans", serif;
+    font-weight: 200;
+    font-style: normal;
+}
 
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    text-align: left;
+    background-color: #1A1A1A; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    font-size: 3rem;
+    font-weight: normal;
+    font-family: "Hubot Sans", serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+
+.text-container {
+    flex: 2;
+    padding-right: 20px;
+    padding-left: 10px;
+}
+
+.text-container h2 {
+    font-size: 28px;
+    color: #fff; 
+    margin-top: 50px;
+    margin-bottom: 25px;
+    background-color: transparent;
+    font-size: 2rem;
+    font-weight: normal;
+    font-family: "Hubot Sans", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.text-container p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #fff;
+    background-color: transparent;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.image-container2 {
+    flex: 2;
+}
+
+.image-container2 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+
+.info-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    background-color: none;
+    background: none;
+
+}
+
+.info-text h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.info-text p {
+    font-size: 14px;
+}
+
+.button-container {
+    background: none;
+}
+
+.info-btn {
+    background-color: transparent;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: 2px solid #fff; /* Solid border for the button */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.info-btn:hover {
+    background-color: #003366;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-container {
+        max-width: 100%;
+    }
+
+    .info-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-btn {
+        margin-top: 10px;
+    }
+}
 
 
 /*Footer CSS */
@@ -420,6 +597,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-weight: normal;
+    font-family: "Hubot Sans", serif;
+    font-weight: 200;
+    font-style: normal;
 }
 
 #footer__logo {
@@ -454,6 +635,10 @@
 
 .footer__link--items h2 {
     margin-bottom: 16px;
+    font-weight: normal;
+    font-family: "Hubot Sans", serif;
+    font-weight: 350;
+    font-style: normal;
 }
 
 .footer__link--items > h2 {
@@ -544,170 +729,313 @@
     }
 }
 
-/* Buy Section */
-.buy-section {
-    background-image: url('/PICS/building.JPG'); /* Replace with your image path */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Parallax effect */
-    text-align: left;
-    transition: 0.4s;
-    padding: 80px 20px;
-    color: #fff;
+.hero-section {
     position: relative;
+    width: 100%;
+    height: 70vh;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
 }
 
-/* Overlay to improve text readability */
-.buy-section::before {
-    content: '';
+.background-image {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.2); /* Semi-transparent black overlay */
+    right: 0;
+    bottom: 0;
+    background-image: url('/PICS/building.JPG');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.75;
     z-index: 1;
 }
-
-/* Section Content */
-.buy-section h1,
-.buy-section p,
-.buy-section h2,
-.buy-section ul li,
-.buy-card p,
-.buy-section h3 {
-    background: none; /* Removes any background */
-    background-color: transparent; /* Ensures no background color */
-    color: #fff;
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 20px;
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity to make it darker */
+    z-index: 0; /* Ensures overlay is above the image but below the text */
 }
-
-.buy-section h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #fff;
-}
-.buy-section h2 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: #fff;
-}
-.buy-section h3 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: #fff;
-}
-
-.buy-section ul {
-    margin: 20px 0;
-    padding-left: 50px;
-    list-style-type: disc;
-    color: #fff;
-    background: none;
-}
-.buy-section ul li {
-    margin-bottom: 10px;
-    line-height: 1.4;
-    font-size: 16px;
-    background: none;
-}
-
-.buy-section ul li::marker {
-    font-size: 1.5rem;
-    color: #696969;
-}
-.buy-section ul li:hover {
-    color: #004494;
-    cursor: pointer;
-}
-
-.buy-section h1 span,
-.buy-section h2 span,
-.buy-section h3 span {
-    background-color: #DCDCDC;
-    background-image: linear-gradient(to top, #A9A9A9 0%, #F0FFFF 100%);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    cursor: pointer;
-}
-
-.buy-section p {
-    font-size: 16px;
-    margin-bottom: 30px;
-    line-height: 1.8;
-    color: #f0f0f0;
-}
-
-.buy-details {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.buy-card {
-    background: rgba(30, 30, 30, 0.9);
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
+.overlay-text {
     text-align: center;
+    color: white;
+    z-index: 2;
+    width: 80%; /* Controls width to center content */
+    margin-bottom: 20px;
+    font-family: "Hubot Sans", serif;
+    font-style: normal;
+    background: none;
+}
+
+.expanding-line {
+    height: 2px; /* Set the line thickness */
+    background: white; /* Line color */
+    width: 0; /* Start width, no visible line initially */
+    margin: 20px auto 0; /* Center the line horizontally */
+    transition: width 0.5s ease-out; /* Animation for line expansion */
+}
+
+.expanding-bar {
+    width: 5px; /* Set the thickness of the vertical bar */
+    background: white; /* Bar color */
+    height: 0; /* Start height, no visible bar initially */
+    margin-left: auto; /* Center the bar next to the line */
+    margin-right: auto;
+    transition: height 0.5s ease-out; /* Animation for bar expansion */
+    position: absolute;
+    left: 50%; /* Position in the center below the line */
+    bottom: 10px; /* Spacing from the bottom of the text */
+}
+.overlay-text h1 {
+    font-size: 4.5rem;
+    margin-bottom: 0.5rem;
+    font-family: "Hubot Sans", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 40px;
+    background: none;
+    padding: 0;
+}
+
+
+.dynamic-weight {
+    font-weight: 200; /* Default weight */
+    transition: font-weight 0.5s ease; /* Smooth transition for font weight change */
+}
+
+.bold {
+    font-weight: 600;
+}
+
+
+.button-container {
+    margin-top: 65px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    width: 100%;
+    gap: 10px;
+    font-weight: 200;
+    font-style: normal;
+    font-family: "Hubot Sans", serif;
+
 }
 
-.buy-card h2 {
+
+.separator {
+    background-color: white;
+    height: 50px; /* Adjust based on your design preference */
+    width: 2px;
+    margin: 0 15px;
+    opacity: 0; /* Start hidden */
+    animation: extend 1s 0.5s forwards ease; /* Animation with delay */
+}
+
+.hero-section:hover .expanding-line {
+    width: 50%; /* End width after expansion, adjust as needed */
+}
+
+.hero-section:hover .expanding-bar {
+    height: 30px; /* End height after expansion, adjust as needed */
+}
+
+/* Animation to extend and show the separator */
+@keyframes extend {
+    from {
+        height: 0;
+        opacity: 0;
+    }
+    to {
+        height: 50px;
+        opacity: 1;
+    }
+}
+@media (max-width: 768px) {
+    .button-container {
+        flex-wrap: wrap; /* Allows buttons to wrap onto the next line */
+        justify-content: space-around; /* Evenly spaces buttons within the container */
+    }
+    .overlay-text h1 {
+        font-size: 3.5rem;
+    }
+
+    button, .separator {
+        flex-basis: 45%; /* Sets the base size for buttons and separators */
+        margin-bottom: 10px; /* Adds space between rows of buttons */
+    }
+
+    .separator {
+        display: none; /* Hides separators in mobile view for clarity */
+    }
+}
+
+
+.home-value-form {
+    background-color: #1A1A1A; /* Dark background for the form */
+    color: #ffffff; /* White text color */
+    padding: 40px; /* Padding around the content */
+    text-align: center; /* Centered text */
+    font-size: 3rem;
+    font-weight: normal;
+    font-family: "Hubot Sans", serif;
+    font-weight: 200;
+    font-style: normal;
+    margin-top: 200px;
+}
+
+.home-value-form h2 {
+    margin-bottom: 10px; 
     font-size: 1.5rem;
-    margin-bottom: 50px;
-    color: #e9e9e9;
+    font-weight: normal;
+    font-family: "Hubot Sans", serif;
+    font-weight: 200;
+    font-style: normal;
+    background: none;
 }
 
-.buy-card p {
+.home-value-form p {
+    margin-bottom: 30px; 
     font-size: 1rem;
-    margin-bottom: 50px;
-    color: #ccc;
+    font-weight: normal;
+    font-family: "Hubot Sans", serif;
+    font-weight: 200;
+    font-style: italic;
+    background: none;
 }
 
-.buy-details button {
-    background-color: #708090;
+.home-value-form form {
+    width: 100%; 
+    font-size: 3rem;
+    font-weight: normal;
+    font-family: "Hubot Sans", serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.form-row {
+    display: flex; /* Flexbox for inline fields */
+    justify-content: space-between; /* Space between the fields */
+    flex-wrap: wrap; /* Wrap onto the next line on small screens */
+    margin-bottom: 20px; /* Margin between rows */
+}
+
+.form-row input[type="text"],
+.form-row select {
+    flex: 1; /* Flex grow to fill space */
+    margin: 0 10px; /* Margin for spacing */
+    padding: 10px; /* Padding inside the inputs */
+    border: 1px solid #333; /* Subtle border for inputs */
+    background-color: #000; /* Black background for inputs */
+    color: #fff; /* White text color */
+}
+
+.form-row input[type="text"]:first-child,
+.form-row input[type="text"]:last-child {
+    flex: 2; /* Larger flex grow for specific fields */
+}
+
+button {
+    padding: 12px 20px; /* Padding inside the button */
+    background-color: transparent; /* Green background color */
+    color: white; /* White text color */
+    border: 2px solid white; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background-color: #003366; /* Darker green on hover */
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column; /* Stack inputs vertically on small screens */
+    }
+
+    .form-row input,
+    .form-row select {
+        flex: 1; /* Full width on small screens */
+        margin: 10px 0; /* Margin for vertical stacking */
+    }
+}
+
+
+.een-careers {
+    background-color: #161616;
+    padding: 20px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.een-careers h2 {
+    color: white;
+    text-align: left;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: normal;
+    font-family: "Hubot Sans", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.benefits-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.benefit {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 5px;
+}
+
+.benefit-title {
+    background: none;
     border: none;
     color: #fff;
+    font-size: 18px;
+    text-align: left;
+    width: 100%;
     padding: 10px 20px;
-    border-radius: 5px;
-    transition: 0.3s;
-    width: auto;
-    align-self: center; /* Ensures buttons are centered within their card */
+    cursor: pointer;
+    outline: none;
 }
 
+.benefit-title:hover,
+.benefit-title:focus {
+    background-color: #333;
+}
 
+.benefit-content {
+    display: none;
+    padding: 10px 20px;
+    color: #666;
+    background-color: #171717;
+    text-align: left;
+    margin-left: 30px;
+    max-width: 900px;
+    margin-bottom: 10px;
+}
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .buy-section h1 {
-        font-size: 2rem;
-    }
+.benefit-title.active + .benefit-content {
+    display: block;
+}
 
-    .buy-card {
-        width: 90%;
+@media (max-width: 768px) {
+    .een-careers {
+        padding: 5px;
     }
 }
 
-@media screen and (max-width: 480px) {
-    .buy-section h1 {
-        font-size: 1.5rem;
-    }
-
-    .buy-card {
-        width: 100%;
-    }
-
-    .buy-card h2 {
-        font-size: 1.2rem;
+@media screen and (max-width: 1290px) {
+    .een-careers {
+        margin-top: 500px;
     }
 }
+
