@@ -16,6 +16,10 @@
     position: sticky;
     top: 0;
     z-index: 999;
+    font-weight: 200;
+    font-style: normal;
+    font-family: "Hubot Sans", serif;
+    text-align: center;
 }
 
 .navbar__container {
@@ -219,6 +223,7 @@ button-transparent {
     display: flex;
     width: 100%;
     justify-content: space-between;
+    
 }
 
 .left-section {
@@ -244,6 +249,7 @@ button-transparent {
     bottom: 20px;
     right: 20px;
     display: flex;
+    
 }
 
 .badge-container img {
@@ -255,11 +261,19 @@ button-transparent {
 h1 {
     font-size: 24px;
     color: #fff;
+    font-weight: normal;
+    font-family: "Hubot Sans", serif;
+    font-weight: 350;
+    font-style: normal;
 }
 
 p {
     font-size: 16px;
     margin-top: 10px;
+    font-weight: normal;
+    font-family: "Hubot Sans", serif;
+    font-weight: 350;
+    font-style: normal;
 }
 
 @media (max-width: 768px) {
@@ -288,6 +302,17 @@ p {
     padding: 20px;
     background-color: #333;
     color: white;
+    font-weight: normal;
+    font-family: "Hubot Sans", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.main-header h1 {
+    font-weight: normal;
+    font-family: "Hubot Sans", serif;
+    font-weight: 450;
+    font-style: normal; 
 }
 
 .about-us {
@@ -300,10 +325,17 @@ p {
 .about-us h2 {
     color: #333;
     font-weight: bold;
+    font-family: "Hubot Sans", serif;
+    font-weight: 600;
+    font-style: normal;
 }
 
 .about-us p {
     margin: 10px 0;
+    font-weight: normal;
+    font-family: "Hubot Sans", serif;
+    font-weight: 350;
+    font-style: normal;
 }
 
 .buttons button {
@@ -314,6 +346,10 @@ p {
     margin-right: 10px;
     border-radius: 5px;
     cursor: pointer;
+    font-weight: normal;
+    font-family: "Hubot Sans", serif;
+    font-weight: 350;
+    font-style: normal;
 }
 
 .buttons button:hover {
@@ -333,6 +369,10 @@ p {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    font-weight: normal;
+    font-family: "Hubot Sans", serif;
+    font-weight: 350;
+    font-style: normal;
 }
 
 .founders-image {
@@ -355,11 +395,19 @@ p {
     padding: 20px;
     font-size: 16px;
     line-height: 1.6;
+    font-weight: normal;
+    font-family: "Hubot Sans", serif;
+    font-weight: 350;
+    font-style: normal;
 }
 
 .founders-text h3 {
     font-size: 24px;
     margin-bottom: 10px;
+    font-weight: normal;
+    font-family: "Hubot Sans", serif;
+    font-weight: 600;
+    font-style: normal;
 }
 
 .founders-text p {
@@ -406,6 +454,10 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-weight: normal;
+    font-family: "Hubot Sans", serif;
+    font-weight: 350;
+    font-style: normal;
 }
 
 #footer__logo {
@@ -422,10 +474,18 @@ p {
     max-width: 1000px;
     display: flex;
     justify-content: center;
+    font-weight: normal;
+    font-family: "Hubot Sans", serif;
+    font-weight: 350;
+    font-style: normal;
 }
 
 .footer__link--wrapper {
     display: flex;
+    font-weight: normal;
+    font-family: "Hubot Sans", serif;
+    font-weight: 350;
+    font-style: normal;
 }
 
 .footer__link--items {
@@ -440,6 +500,10 @@ p {
 
 .footer__link--items h2 {
     margin-bottom: 16px;
+    font-weight: normal;
+    font-family: "Hubot Sans", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .footer__link--items > h2 {
