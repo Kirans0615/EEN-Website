@@ -747,7 +747,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('/PICS/building.JPG');
+    background-image: URL("building.JPG");
     background-size: cover;
     background-position: center;
     opacity: 0.75;
