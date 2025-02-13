@@ -351,6 +351,7 @@ body, html {
 
     .services h1 {
         font-size: 3rem;
+        align-text: center;
     }
 
     .services__card {
@@ -820,6 +821,11 @@ button:hover {
     font-size: 18px;
 }
 
+@media (max-width: 480px) {
+    .client-image {
+        margin-top: 40px;
+    }
+}
 @media (max-width: 768px) {
     .client-section {
         flex-direction: column;
