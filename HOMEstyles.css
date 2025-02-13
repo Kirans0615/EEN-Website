@@ -794,7 +794,7 @@ button:hover {
 .testimonial span {
     font-weight: bold;
     color: #333;
-    margin-top: 10px;
+    margin-top: 0px;
 }
 
 .stars {
