@@ -87,11 +87,15 @@
     
     <form method="POST" class="quote-form" name="home-value-form" data-netlify="true">
         <div class="form-row">
-            <input type="text" id="streetAddress" name="streetAddress" placeholder="Street Address" style="height: 30px; margin-top: 50px;" required>
-            <input type="text" id="city" name="city" placeholder="City" style="height: 30px; margin-top: 50px;" required>
+            <input type="text" id="fullName" name="fullName" placeholder="Full Name" style="height: 30px; margin-top: 50px;" required>
+            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" style="height: 30px; margin-top: 50px;" required>
         </div>
         <div class="form-row">
-            <select id="state" name="state" style="height: 35px; width: 470px;" required>
+            <input type="text" id="streetAddress" name="streetAddress" placeholder="Street Address" style="height: 30px; margin-top: 20px;" required>
+            <input type="text" id="city" name="city" placeholder="City" style="height: 30px; margin-top: 20px;" required>
+        </div>
+        <div class="form-row">
+            <select id="state" name="state" style="height: 35px; width: 470px; margin-top: 20px;" required>
                 <option value="">Select State</option>
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
@@ -150,8 +154,8 @@
         <select name="foundUs" id="foundUs" style="height: 35px; margin-top: -8px;" required>
             <option value="">How did you find us?</option>
             <option value="google">Google</option>
-            <option value="facebook">Facebook</option>
-            <option value="friend">Friend/Family</option>
+            <option value="facebook">Social Media</option>
+            <option value="friend">Referral</option>
             <option value="other">Other</option>
         </select>
         
