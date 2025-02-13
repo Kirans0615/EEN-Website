@@ -614,6 +614,21 @@ button:hover {
     animation: extend 1s 0.5s forwards ease; /* Animation with delay */
 }
 
+@media screen and (max-width: 480px) {
+    .hero-section {
+        height: 100vh; /* Increased height */
+    }
+
+    .overlay-text {
+        margin-top: 30px; /* Pushes down the text */
+    }
+
+    .dynamic-weight {
+        font-weight: 250; /* Limits maximum bolding */
+    }
+}
+
+
 /* Animation to extend and show the separator */
 @keyframes extend {
     from {
