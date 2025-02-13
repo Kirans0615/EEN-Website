@@ -346,16 +346,17 @@ body, html {
 
 @media screen and (max-width: 480px) {
     .services {
-        height: 1400px;
+        height: 1400px; /* Adjust height as necessary */
     }
 
     .services h1 {
-        font-size: 3rem;
-        align-text: center;
+        font-size: 3rem; /* Keeps font size at 3rem */
+        text-align: center; /* Correct property to center text */
+        margin-top: 12rem; /* Adjust top margin to lower the text on the screen */
     }
 
     .services__card {
-        width: 300px;
+        width: 300px; /* Adjust card width for smaller screens */
     }
 }
 
@@ -822,10 +823,29 @@ button:hover {
 }
 
 @media (max-width: 480px) {
+    .client-section {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px; /* Adds padding at the top of the section */
+    }
+
     .client-image {
-        margin-top: 40px;
+        width: 100%; /* Ensures the image container takes the full width */
+        padding: 0 10px; /* Adds padding to prevent the image from touching the screen edges */
+        margin-top: 20px; /* Adds space above the image to separate it from the previous section */
+    }
+
+    .client-image img {
+        width: 100%; /* Makes the image responsive */
+        height: auto; /* Maintains the aspect ratio of the image */
+        object-fit: cover; /* Ensures the image covers the div completely without being cut off */
+    }
+
+    .testimonials {
+        margin-top: 20px; /* Adjusts spacing between the image and testimonials */
     }
 }
+
 @media (max-width: 768px) {
     .client-section {
         flex-direction: column;
