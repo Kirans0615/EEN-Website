@@ -649,10 +649,10 @@ body {
 }
 
 @media (max-width: 480px) {
-    hero-section: {
-        margin-top: 30px;
+    .hero-section: {
+        margin-top: 60px;
     }
-    services h1 {
+    .services h1 {
         font-size: 1.8rem;
     }
 }
