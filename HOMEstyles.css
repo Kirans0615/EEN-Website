@@ -362,6 +362,9 @@ body, html {
      .services__card p {
          margin-top: 60px;
      }
+    .services__card button {
+         margin-top: 60px;
+     }
 
     .services__card:nth-child(2) {
         max-width: 310px;
@@ -855,7 +858,7 @@ button:hover {
     }
 
     .testimonials {
-        margin-top: 20px; /* Adjusts spacing between the image and testimonials */
+        margin-top: 90px; /* Adjusts spacing between the image and testimonials */
     }
 }
 
