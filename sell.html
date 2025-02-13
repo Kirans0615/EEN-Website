@@ -160,21 +160,22 @@ x
     
     
     <section class="home-value-form">
-        <h2>Get an Appraisal Today</h2>
-        <p>However you want to sell we want to work for you</p>
-        <form action="#" method="post">
-            <div class="form-row">
-                <input type="text" id="streetAddress" name="firstname" placeholder="First Name" required>
-                <input type="text" id="city" name="Last Name" placeholder="Last Name" required>
-                <input type="text" id="zipCode" name="zipCode" placeholder="Phone" required>
-                <input type="text" id="zipCode" name="zipCode" placeholder="Email" required>
-            </div>
-            <div class="form-row">
-                <input type="text" id="zipCode" name="zipCode" placeholder="Message" style="height:100px;" required>
-            </div>
-            <button type="submit">Submit</button>
-        </form>
-    </section>
+    <h2>Get An Offer Today</h2>
+    <p>However you want to sell, we want to work with you</p>
+    <form method="post" data-netlify="true" name="appraisal-form">
+        <div class="form-row">
+            <input type="text" id="firstName" name="firstname" placeholder="First Name" required>
+            <input type="text" id="lastName" name="lastname" placeholder="Last Name" required>
+            <input type="text" id="phone" name="phone" placeholder="Phone" required>
+            <input type="text" id="email" name="email" placeholder="Email" required>
+        </div>
+        <div class="form-row">
+            <textarea id="message" name="message" placeholder="Message" required style="height: 100px;"></textarea>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
     
 
     
