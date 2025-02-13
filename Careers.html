@@ -154,25 +154,29 @@
 
     
     <div class="application-form">
-        <div class="container">
-            <h2>Submit Your Application</h2>
-            <form action="#" method="POST">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" required>
-    
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" required>
-    
-                <label for="resume">Upload Resume</label>
-                <input type="file" id="resume" name="resume" required>
-    
-                <label for="coverLetter">Cover Letter (Optional)</label>
-                <textarea id="coverLetter" name="coverLetter" rows="4"></textarea>
-    
-                <button type="submit" class="button submit-button">Submit Application</button>
-            </form>
-        </div>
+    <div class="container">
+        <h2>Submit Your Application</h2>
+        <form method="POST" data-netlify="true" data-netlify-honeypot="bot-field" enctype="multipart/form-data" name="job-application-form">
+            <input type="hidden" name="form-name" value="job-application-form" />
+            <p hidden><label>Don’t fill this out if you're human: <input name="bot-field" /></label></p>
+            
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="resume">Upload Resume</label>
+            <input type="file" id="resume" name="resume" required>
+
+            <label for="coverLetter">Cover Letter (Optional)</label>
+            <textarea id="coverLetter" name="coverLetter" rows="4"></textarea>
+
+            <button type="submit" class="button submit-button">Submit Application</button>
+        </form>
     </div>
+</div>
+
     
 
 
