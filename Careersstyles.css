@@ -648,6 +648,15 @@ body {
     }
 }
 
+@media (max-width: 480px) {
+    hero-section: {
+        margin-top: 30px;
+    }
+    services h1 {
+        font-size: 1.8rem;
+    }
+}
+
 
 .services {
     background-color: #181818;
