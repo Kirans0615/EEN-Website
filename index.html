@@ -87,8 +87,8 @@
         
         <form name="Worth-Form" method="POST" data-netlify="true" onSubmit="submit">
             <div class="form-row">
-                <input type="text" id="streetAddress" name="streetAddress" placeholder="Street Address" style="height: 30px; margin-top: 50px;" name="Street Address">
-                <input type="text" id="city" name="city" placeholder="City" style="height: 30px; margin-top: 50px;" name="other-info">
+                <input type="text" id="streetAddress" name="streetAddress" placeholder="Street Address" name="Street Address" style="height: 30px; margin-top: 50px;"required>
+                <input type="text" id="city" name="city" placeholder="City" name="other-info" style="height: 30px; margin-top: 50px;">
             </div>
             <div class="form-row">
                 <select id="state" name="state" style="height: 35px; width: 470px;" name="state">
@@ -145,9 +145,9 @@
                     <option value="WI">Wisconsin</option>
                     <option value="WY">Wyoming</option>
                 </select>
-                <input type="text" id="zipCode" name="zipCode" placeholder="Zip Code" style="height: 35px; margin-left: 10px;"required name="zipcode">
+                <input type="text" id="zipCode" name="zipCode" placeholder="Zip Code" name="zipcode" style="height: 35px; margin-left: 10px;"required >
             </div>
-            <select name="foundUs" id="foundUs"style="height: 35px; margin-top:-8px;"required name="how-you-found-us">
+            <select name="foundUs" id="foundUs" name="how-you-found-us" style="height: 35px; margin-top:-8px;"required>
                 <option value="">How did you find us?</option>
                 <option value="google">Google</option>
                 <option value="facebook">Facebook</option>
