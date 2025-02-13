@@ -359,9 +359,13 @@ body, html {
         width: 300px; /* Adjust card width for smaller screens */
     }
 
+     .services__card h2 {
+         margin-bottom: 20px;
+     }
+
     .services__card:nth-child(2) {
-        max-width: 300px;
-        margin-bottom: 30px;
+        max-width: 310px;
+        margin-bottom: 50px;
     }
     
 }
@@ -841,10 +845,7 @@ button:hover {
     }
 
     .client-image {
-        width: 100%; /* Ensures the image container takes the full width */
-        margin-right: 80px
-        padding: 0 10px; /* Adds padding to prevent the image from touching the screen edges */
-        margin-top: 20px; /* Adds space above the image to separate it from the previous section */
+        display: none; 
     }
 
     .client-image img {
