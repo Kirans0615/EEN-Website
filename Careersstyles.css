@@ -650,13 +650,17 @@ body {
 
 @media (max-width: 480px) {
     .hero-section {
-        padding-top: 20px; /* Adds 20px of padding to the top of the hero section */
+        padding-top: 40px; /* Adds 20px of padding to the top of the hero section */
     }
 }
 @media (max-width: 480px) {
     .services h1 {
         font-size: 1.5rem; /* Reduces the font size */
-        line-height: 1.2; /* Adjusts the line spacing to prevent the text from stacking too closely */
+        font-weight: 250;
+        line-height: normal; /* Default line spacing */
+        text-align: center; /* Aligns text to the left */
+        padding: 0 15px; /* Adds padding to both sides for better spacing */
+        word-wrap: break-word;
     }
 }
 
