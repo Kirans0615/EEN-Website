@@ -358,6 +358,12 @@ body, html {
     .services__card {
         width: 300px; /* Adjust card width for smaller screens */
     }
+
+    .services__card:nth-child(2) {
+        max-width: 300px;
+        margin-bottom: 30px;
+    }
+    
 }
 
 /*Footer CSS */
