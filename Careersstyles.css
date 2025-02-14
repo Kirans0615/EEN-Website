@@ -63,6 +63,10 @@ body {
     align-items: center;
     list-style: none;
     text-align: center;
+    font-weight: 200;
+    font-style: normal;
+    font-family: "Hubot Sans", serif;
+    text-align: center;
 }
 
 .navbar__item {
