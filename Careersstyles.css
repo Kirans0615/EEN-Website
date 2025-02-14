@@ -105,6 +105,9 @@ body {
    color: #fff; 
    border: 2px solid white;
 }
+
+
+
 .button-transparent {
     background-color: transparent; /* Makes the background see-through */
     color: white; /* Sets the text color */
