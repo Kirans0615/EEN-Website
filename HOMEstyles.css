@@ -28,7 +28,9 @@ body, html {
 }
 
 @media screen and (max-width: 480px) {
-    height: 87px;
+    .navbar {
+        height: 87px;
+    }
 }
 
 
