@@ -27,6 +27,11 @@ body, html {
     text-align: center;
 }
 
+@media screen and (max-width: 480px) {
+    height: 87px;
+}
+
+
 .navbar__container {
     display: flex;
     justify-content: space-between;
