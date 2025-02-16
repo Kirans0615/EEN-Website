@@ -610,6 +610,16 @@
 }
 
 
+.why-choose-een .button-container a button {
+    height: 50px;  /* Increase the height */
+    background: none;  /* Remove any background */
+}
+
+/* Ensure other buttons remain unaffected */
+.why-choose-een .button-container button:not(:first-child) {
+    background: initial;  /* Resets background for other buttons */
+}
+
 /*Footer CSS */
 
 .footer__container {
