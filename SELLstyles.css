@@ -465,6 +465,9 @@
     margin-top: 120px;
 }
 
+.why-choose-een .button {
+    background: none;
+
 
 .button-container {
     text-align: center; /* Center-aligns the content of the container */
@@ -611,7 +614,7 @@
 
 
 .why-choose-een .button-container a button {
-    height: 60px;  /* Increase the height */
+    height: 67px;  /* Increase the height */
     background: none;  /* Remove any background */
 }
 
