@@ -26,6 +26,11 @@ body, html {
     font-family: "Hubot Sans", serif;
     text-align: center;
 }
+@media screen and (max-width: 480px) {
+    .navbar {
+        height: 87px;
+    }
+}
 
 .navbar__container {
     display: flex;
