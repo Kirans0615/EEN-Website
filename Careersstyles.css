@@ -29,6 +29,7 @@ body, html {
 @media screen and (max-width: 480px) {
     .navbar {
         height: 87px;
+        margin-bottom: 30px;
     }
 }
 
