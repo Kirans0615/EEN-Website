@@ -533,7 +533,7 @@
 /* Property Gallery Container */
 .property-gallery {
     background-color: #131313;
-    padding: 80px 20px;
+    padding: 65px 20px;
     text-align: center;
     color: white;
     font-family: "Hubot Sans", serif;
@@ -557,7 +557,7 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
   }
   
   .swiper-slide {
@@ -680,8 +680,10 @@
 }
 
 @media (max-width: 768px) {
+    .property-gallery {
+        padding-bottom: 30px;
     .swiper.mySwiper {
-        padding-bottom: 40px;
+        padding-bottom: 20px;
     }
 
     .property-slide-card .inner-swiper {
@@ -704,8 +706,11 @@
 
 @media (max-width: 480px) {
     .property-gallery {
-        padding: 60px 15px;
+        padding-bottom: 20px;
     }
+
+    .swiper.myswiper {
+        padding-bottom: 10px;
 
     .property-gallery h2 {
         font-size: 1.8rem;
