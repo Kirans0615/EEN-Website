@@ -1,66 +1,52 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const observer = new IntersectionObserver(entries => {
+document.addEventListener("DOMContentLoaded", function () {
+    // === SECTION 1: Animate .line elements on scroll ===
+    const lineObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0)';
             }
         });
-    }, {
-        threshold: 0.5 // Trigger when 50% of the element is visible
-    });
+    }, { threshold: 0.5 });
 
     document.querySelectorAll('.line').forEach(line => {
-        observer.observe(line);
-        line.style.transform = 'translateY(-100px)'; // Start position for animation
+        lineObserver.observe(line);
+        line.style.transform = 'translateY(-100px)';
     });
-});
 
-document.addEventListener('DOMContentLoaded', function() {
+    // === SECTION 2: Alternating font weight effect ===
     const spans = document.querySelectorAll('.dynamic-weight');
-    let currentIndex = 0; // Starting index
+    let weightIndex = 0;
 
     function updateWeight() {
-        // Reset all to default
         spans.forEach(span => span.classList.remove('bold'));
-        
-        // Set the current to bold
-        spans[currentIndex].classList.add('bold');
-
-        // Move to next index or cycle back to start
-        currentIndex = (currentIndex + 1) % spans.length;
+        spans[weightIndex].classList.add('bold');
+        weightIndex = (weightIndex + 1) % spans.length;
     }
 
-    // Initial call to set the first item's weight
-    updateWeight();
+    if (spans.length > 0) {
+        updateWeight();
+        setInterval(updateWeight, 1500);
+    }
 
-    // Continue updating every 2 seconds
-    setInterval(updateWeight, 1500);
-});
-
-document.querySelectorAll('.benefit-title').forEach(button => {
-    button.addEventListener('click', function() {
-        this.classList.toggle('active');
-        let content = this.nextElementSibling;
-        if (content.style.display === "block") {
-            content.style.display = "none";
-        } else {
-            content.style.display = "block";
-        }
+    // === SECTION 3: Expandable benefit sections ===
+    document.querySelectorAll('.benefit-title').forEach(button => {
+        button.addEventListener('click', function () {
+            this.classList.toggle('active');
+            const content = this.nextElementSibling;
+            content.style.display = content.style.display === "block" ? "none" : "block";
+        });
     });
-});
 
-
-document.addEventListener("DOMContentLoaded", function () {
+    // === SECTION 4: Swiper for buy.html (outer + inner sliders) ===
     if (window.location.pathname.includes("buy.html")) {
-        // Outer Swiper (Property Cards)
         const outerSwiper = new Swiper(".mySwiper", {
             loop: true,
             autoplay: {
-                delay: 2000, // 3 seconds between slides
-                disableOnInteraction: false, // allow buttons to override, but autoplay resumes
+                delay: 2000,
+                disableOnInteraction: false,
             },
-            speed: 2000, // smooth transition
+            speed: 2000,
             slidesPerView: 2,
             navigation: {
                 nextEl: ".swiper-button-next",
@@ -68,8 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
             },
         });
 
-        // Inner Swipers (Image Gallery in Each Property Card)
-        document.querySelectorAll('.inner-swiper').forEach((swiperContainer) => {
+        document.querySelectorAll('.inner-swiper').forEach(swiperContainer => {
             new Swiper(swiperContainer, {
                 loop: true,
                 autoplay: {
@@ -82,94 +67,56 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     }
-});
 
+    // === SECTION 5: Mobile menu toggle ===
+    const menu = document.querySelector('#mobile-menu');
+    const menuLinks = document.querySelector('.navbar__menu');
 
-
-document.addEventListener("DOMContentLoaded", function() {
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
+    if (menu && menuLinks) {
+        menu.addEventListener('click', function () {
+            menu.classList.toggle('is-active');
+            menuLinks.classList.toggle('active');
         });
-    }, {
-        threshold: 0.5 // Trigger when 50% of the element is visible
-    });
+    }
 
-    document.querySelectorAll('.line').forEach(line => {
-        observer.observe(line);
-        line.style.transform = 'translateY(-100px)'; // Start position for animation
-    });
-});
+    // === SECTION 6: Rotating text + image animation ===
+    const textElements = ["Sell Your Home", "Buy a Home", "Work in Real Estate", "Seamless Deals"];
+    const imagePaths = ["/PICS/students.jpg", "/PICS/signdeal.jpg", "/PICS/family.jpg", "/PICS/bridge.jpg"];
+    const textContainer = document.querySelector('.text-section');
+    const imageElement = document.getElementById('dynamic-image');
+    let currentIndex = 0;
 
-
-
-
-const menu = document.querySelector('#mobile-menu');
-const menuLinks = document.querySelector('.navbar__menu');
-
-menu.addEventListener('click', function() {
-    menu.classList.toggle('is-active');
-    menuLinks.classList.toggle('active');
-});
-
-const textElements = [
-    "Sell Your Home",
-    "Buy a Home",
-    "Work in Real Estate",
-    "Seamless Deals"
-];
-
-const imagePaths = [
-    "/PICS/students.jpg",
-    "/PICS/signdeal.jpg",
-    "/PICS/family.jpg",
-    "/PICS/bridge.jpg"
-];
-const imageStyles = [
-    { height: '50px', objectFit: 'cover', width: '100%' },
-    { height: '50px', objectFit: 'contain', width: '100%' },
-    { height: '50px', objectFit: 'cover', width: '100%' },
-    { height: '50px', objectFit: 'contain', width: '100%' }
-];
-
-const textContainer = document.querySelector('.text-section');
-const imageElement = document.getElementById('dynamic-image');
-
-let currentIndex = 0;
-
-function updateContent() {
-    imageElement.style.opacity = 0;
-
-    setTimeout(() => {
-        textContainer.querySelectorAll('p').forEach((p, index) => {
-            p.classList.remove('active');
-            if (index === currentIndex) {
-                p.classList.add('active');
-            }
+    if (textContainer && imageElement) {
+        textElements.forEach(text => {
+            const p = document.createElement('p');
+            p.textContent = text;
+            textContainer.appendChild(p);
         });
 
-        imageElement.src = imagePaths[currentIndex];
-        imageElement.alt = textElements[currentIndex];
+        function updateContent() {
+            imageElement.style.opacity = 0;
 
-        if (!imageElement.classList.contains('dynamic-image-style')) {
-            imageElement.classList.add('dynamic-image-style');
+            setTimeout(() => {
+                textContainer.querySelectorAll('p').forEach((p, index) => {
+                    p.classList.remove('active');
+                    if (index === currentIndex) {
+                        p.classList.add('active');
+                    }
+                });
+
+                imageElement.src = imagePaths[currentIndex];
+                imageElement.alt = textElements[currentIndex];
+
+                if (!imageElement.classList.contains('dynamic-image-style')) {
+                    imageElement.classList.add('dynamic-image-style');
+                }
+
+                imageElement.style.opacity = 1;
+                currentIndex = (currentIndex + 1) % textElements.length;
+            }, 500);
         }
 
-        imageElement.style.opacity = 1;
-
-        currentIndex = (currentIndex + 1) % textElements.length;
-    }, 500);
-}
-
-textElements.forEach(text => {
-    const p = document.createElement('p');
-    p.textContent = text;
-    textContainer.appendChild(p);
+        updateContent();
+        setInterval(updateContent, 4500);
+    }
 });
-
-updateContent();
-setInterval(updateContent, 4500);
-
