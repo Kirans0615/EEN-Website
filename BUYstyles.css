@@ -704,11 +704,8 @@
 
 @media (max-width: 480px) {
     .property-gallery {
-        padding-bottom: 20px;
+        padding: 60px 15px;
     }
-
-    .swiper.mySwiper {
-        padding-bottom: 10px;
 
     .property-gallery h2 {
         font-size: 1.8rem;
