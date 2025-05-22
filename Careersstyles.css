@@ -481,7 +481,7 @@ body, html {
 
 .application-form label {
     margin-bottom: 5px;
-    color: #A9A9A9;
+    color: white;
 }
 
 .application-form input[type="text"],
