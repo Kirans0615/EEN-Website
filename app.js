@@ -51,6 +51,38 @@ document.querySelectorAll('.benefit-title').forEach(button => {
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    if (window.location.pathname.includes("buy.html")) {
+        // Outer Swiper (Property Cards)
+        const outerSwiper = new Swiper(".mySwiper", {
+            loop: true,
+            autoplay: {
+                delay: 2000, // 3 seconds between slides
+                disableOnInteraction: false, // allow buttons to override, but autoplay resumes
+            },
+            speed: 2000, // smooth transition
+            slidesPerView: 2,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+
+        // Inner Swipers (Image Gallery in Each Property Card)
+        document.querySelectorAll('.inner-swiper').forEach((swiperContainer) => {
+            new Swiper(swiperContainer, {
+                loop: true,
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false,
+                },
+                speed: 700,
+                slidesPerView: 1,
+                allowTouchMove: true,
+            });
+        });
+    }
+});
 
 
 
@@ -140,7 +172,4 @@ textElements.forEach(text => {
 
 updateContent();
 setInterval(updateContent, 4500);
-
-// Adding functionality for alternating font weight
-
 
