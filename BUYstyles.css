@@ -533,7 +533,10 @@
 /* Property Gallery Container */
 .property-gallery {
     background-color: #131313;
-    padding: 80px 20px;
+    padding-top: 80px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+    padding-left: 20px;
     text-align: center;
     color: white;
     font-family: "Hubot Sans", serif;
