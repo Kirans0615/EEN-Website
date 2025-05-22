@@ -447,8 +447,8 @@ body, html {
     font-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    
 }
+
 
 .application-form .container {
     max-width: 800px;
@@ -488,6 +488,8 @@ body, html {
 .application-form input[type="email"],
 .application-form input[type="file"],
 .application-form textarea {
+    color: white;
+    background-color: #1a1a1a;
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
