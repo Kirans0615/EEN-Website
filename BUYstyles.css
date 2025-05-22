@@ -644,7 +644,7 @@
   /* Outer Swiper Navigation Arrows */
   .swiper-button-prev,
   .swiper-button-next {
-    color: white;
+    color: #fff;
     background: none;
     font-size: 18px;
     width: 25px;
