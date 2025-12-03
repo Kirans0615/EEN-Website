@@ -1054,6 +1054,16 @@ button:hover {
     font-size: 18px;
 }
 
+
+.website__rights a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.website__rights a:hover {
+    text-decoration: underline;
+}
+
 @media (max-width: 480px) {
     .client-section {
         margin-top: 250px;
