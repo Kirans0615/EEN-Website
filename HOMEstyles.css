@@ -1058,10 +1058,14 @@ button:hover {
 .website__rights a {
     color: inherit;
     text-decoration: none;
+    color: #ffffff;          
+    transition: color 0.2s ease;
 }
 
 .website__rights a:hover {
     text-decoration: underline;
+    color: #cccccc;          /* darker gray on hover */
+
 }
 
 @media (max-width: 480px) {
