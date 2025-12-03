@@ -6,6 +6,10 @@
     font-family: 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Cantarell', 'Helvetica Neue', sans-serif;
 }
 
+.section {
+    background: transparent;
+}
+
 
 .navbar {
     background: #131313;
