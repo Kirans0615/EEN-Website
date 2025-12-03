@@ -14,13 +14,14 @@
 .section li {
     display: flex;
     flex-direction: column;
-    background-color: #131313;
+    background-color: #1A1A1A;
     color: white;
     font-size: 1.2rem;
     font-weight: normal;
     font-family: "Hubot Sans", serif;
     font-weight: 200;
     font-style: normal;
+    
 }
     
 
