@@ -270,27 +270,21 @@
             <option value="other">Other</option>
         </select>
 
-       <div style="margin-top: 10px; font-size: 0.67em; font-family: 'Hubot Sans', serif;">
-        <label style="display: flex; align-items: flex-start; gap: 8px; font-family: 'Hubot Sans', serif;">
-        <input type="checkbox" name="consent" required style="font-family: 'Hubot Sans', serif;">
-        <span style="font-family: 'Hubot Sans', serif;">
-            By submitting this form, I agree to the 
-            <strong style="font-family: 'Hubot Sans', serif;">
-                <a href="/termsofservice.html" target="_blank" 
-                   style="font-family: 'Hubot Sans', serif; color: white; text-decoration: underline;"
-                    Terms of Service
-                </a>
-            </strong> and 
-            <strong style="font-family: 'Hubot Sans', serif;">
-                <a href="/privacyinformation.html" target="_blank" 
-                   style="font-family: 'Hubot Sans', serif; color: white; text-decoration: underline;"
-                    Privacy Rules
-                </a>
-            </strong>, 
-            and I consent to receiving email and phone call messages from Empower Estates Network.
-            </span>
-        </label>
-    </div>
+       <label style="display: flex; align-items: flex-start; gap: 6px; margin-top: 10px; font-size: 0.7em;">
+        <input type="checkbox" name="consent_opt_in" required style="margin-top: 2px;">
+          <span>
+    By checking this box and submitting this form, you agree to our
+    <a href="termsofservice.html" target="_blank" style="color: #ffffff; text-decoration: underline;">
+      Terms of Service
+    </a>
+    and
+    <a href="/privacyinformation.html" target="_blank" style="color: #ffffff; text-decoration: underline;">
+      Privacy Rules
+    </a>.
+    You also consent to receive emails, phone calls, and text messages about your inquiry at the contact information you provide.
+  </span>
+</label>
+
 
 
         <button type="submit">GET A FREE QUOTE</button>
