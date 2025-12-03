@@ -481,7 +481,6 @@
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    font-size: 3rem;
     font-weight: normal;
     font-family: "Hubot Sans", serif;
     font-weight: 200;
@@ -1107,7 +1106,6 @@
     color: #ffffff; /* White text color */
     padding: 40px; /* Padding around the content */
     text-align: center; /* Centered text */
-    font-size: 3rem;
     font-weight: normal;
     font-family: "Hubot Sans", serif;
     font-weight: 200;
