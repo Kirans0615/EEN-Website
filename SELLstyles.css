@@ -976,6 +976,7 @@ home* {
     font-family: "Hubot Sans", serif;
     font-weight: 200;
     font-style: normal;
+    text-align:center;
 }
 
 .form-row {
