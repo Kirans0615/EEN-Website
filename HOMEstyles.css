@@ -1060,12 +1060,18 @@ button:hover {
     text-decoration: none;
     color: #ffffff;          
     transition: color 0.2s ease;
+    margin: 0 10px;             /* spacing between the | and links */
 }
 
 .website__rights a:hover {
     text-decoration: underline;
     color: #cccccc;          /* darker gray on hover */
 
+}
+
+.website__rights .sep {
+    margin: 0 10px;             /* spacing around each | */
+    color: #ffffff;
 }
 
 @media (max-width: 480px) {
