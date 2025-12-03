@@ -488,7 +488,6 @@
     justify-content: center;
     padding: 50px 10%;
     background-color: #131313;
-    font-size: 3rem;
     font-weight: normal;
     font-family: "Hubot Sans", serif;
     font-weight: 200;
@@ -533,7 +532,6 @@
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    font-size: 3rem;
     font-weight: normal;
     font-family: "Hubot Sans", serif;
     font-weight: 200;
