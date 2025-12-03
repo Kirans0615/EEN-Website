@@ -172,10 +172,21 @@ x
         <div class="form-row">
             <input type="text" id="message" name="message" placeholder="Message" style="height:100px;" required>
         </div>
-        <p style="margin-top: 10px; font-size: 0.8.4em;">
-            By submitting this form, you agree to our <strong>Terms of Service</strong> and <strong>Privacy Rules</strong>. 
-            To view our privacy information, <a href="/privacyinformation.html" target="_blank">click here</a>.
-        </p>
+       <label style="display: flex; align-items: flex-start; gap: 6px; margin-top: 10px; font-size: 0.7em;">
+  <input type="checkbox" name="consent_opt_in" required style="margin-top: 2px;">
+  <span>
+    By checking this box and submitting this form, you agree to our
+    <a href="termsofservice.html" target="_blank" style="color: #ffffff; text-decoration: underline;">
+      Terms of Service
+    </a>
+    and
+    <a href="/privacyinformation.html" target="_blank" style="color: #ffffff; text-decoration: underline;">
+      Privacy Rules
+    </a>.
+    You also consent to receive emails, phone calls, and text messages about your inquiry at the contact information you provide.
+  </span>
+</label>
+
         <button type="submit">Submit</button>
     </form>
 </section>
