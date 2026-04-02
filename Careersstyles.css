@@ -29,7 +29,7 @@ html {
 body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
-    font-family: var(--font-main);
+    font-family: 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Cantarell', 'Helvetica Neue', sans-serif;
     font-weight: 300;
     overflow-x: hidden;
     line-height: 1.6;
@@ -455,7 +455,7 @@ blockquote cite {
     background: none;
     border: none;
     color: var(--text-primary);
-    font-family: var(--font-main);
+    font-family: "Hubot Sans", serif;
     font-size: clamp(0.9rem, 2.5vw, 1.05rem);
     font-weight: 300;
     text-align: left;
@@ -473,14 +473,26 @@ blockquote cite {
     color: #bbb;
 }
 
-.benefit-title i {
+.benefit-title::after {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(45deg);
     flex-shrink: 0;
-    font-size: 0.8rem;
     transition: transform 0.3s ease;
+    margin-bottom: 3px;
 }
 
-.benefit-title.active i {
-    transform: rotate(180deg);
+.benefit-title.active::after {
+    transform: rotate(-135deg);
+    margin-bottom: -3px;
+}
+
+.benefit-title i {
+    display: none;
 }
 
 .benefit-content {
@@ -721,13 +733,16 @@ blockquote cite {
    FOOTER
    ============================================================ */
 .footer__container {
-    background-color: #0e0e0e;
-    padding: 60px 24px 40px;
+    background-color: #141414;
+    padding: 5rem 0;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 0;
-    border-top: 1px solid var(--border);
+    font-weight: normal;
+    font-family: "Hubot Sans", serif;
+    font-weight: 200;
+    font-style: normal;
 }
 
 #footer__logo {
