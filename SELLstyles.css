@@ -515,8 +515,8 @@
     cursor: pointer; /* Changes the cursor to a pointer on hover */
 }
 
-.button-container button:hover {
-    background-color: #e1e1e1; /* Slightly darker background on hover */
+.why-choose-een .button-container button:hover {
+    background-color: #004494;
 }
 
 
