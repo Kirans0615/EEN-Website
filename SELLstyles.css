@@ -87,6 +87,7 @@
     padding: 0 1rem;
     width: 100%;
     background-color: transparent;
+    
 }
 
 .button {
@@ -106,18 +107,20 @@
    border: 2px solid white;
 }
 
+
+
 .button-transparent {
-    background-color: transparent;
-    color: white;
-    border: 2px solid white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
+    background-color: transparent; /* Makes the background see-through */
+    color: white; /* Sets the text color */
+    border: 2px solid white; /* Adds a white border around the button */
+    padding: 10px 20px; /* Adds space inside the button */
+    text-align: center; /* Centers the text inside the button */
+    text-decoration: none; /* Removes underline from text */
+    display: inline-block; /* Allows setting dimensions */
+    font-size: 16px; /* Sets the font size */
+    margin: 4px 2px; /* Adds margin around the button */
+    cursor: pointer; /* Changes the mouse cursor to a pointer on hover */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
 }
 
 .button:hover {
@@ -165,9 +168,14 @@
         font-size: 1.3rem;
     }
 
+
+
     #navbar__logo {
         padding-left: 25px;
     }
+
+
+    
 
     .navbar__toggle .bar {
         width: 25px;
@@ -225,6 +233,8 @@
         transform: translateY(-8px) rotate(-45deg);   
     }
 }
+
+
 
 /* Mobile Responsive */
 @media screen and (max-width: 768px) {
@@ -320,21 +330,23 @@
     font-family: "Hubot Sans", serif;
 }
 
+
 .website__rights a {
     color: inherit;
     text-decoration: none;
     color: #ffffff;          
     transition: color 0.2s ease;
-    margin: 0 10px;
+    margin: 0 10px;             /* spacing between the | and links */
 }
 
 .website__rights a:hover {
     text-decoration: underline;
-    color: #cccccc;
+    color: #cccccc;          /* darker gray on hover */
+
 }
 
 .website__rights .sep {
-    margin: 0 10px;
+    margin: 0 10px;             /* spacing around each | */
     color: #ffffff;
 }
 
@@ -342,8 +354,8 @@
     height: 350px;
     width: 350px;
     border-radius: 10px;
-    background-color: #131313;
-    border: 1px solid #FFFFFF;
+    background-color: #131313; /* Uniform black background */
+    border: 1px solid #FFFFFF; /* Wide white border */
     color: white;
     display: flex;
     flex-direction: column;
@@ -358,7 +370,6 @@
     transition: transform 0.7s ease-in-out;
     margin-bottom: 100px;
 }
-
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -368,22 +379,27 @@
     }
 }
 
+/* Adding a slight delay to each card's animation to enhance the effect */
 .services__card:nth-child(1) {
-    animation-delay: 0.4s;
+    animation-delay: 0.4s; /* Delay for the first card */
 }
 
 .services__card:nth-child(2) {
-    animation-delay: 0.4s;
+    animation-delay: 0.4s; /* Increased delay for the second card */
 }
 
 .services__card:nth-child(3) {
-    animation-delay: 0.4s;
+    animation-delay: 0.4s; /* Further delay for the third card */
 }
 
+
+
+/* Removed the before pseudo-element */
 .services__card::before {
-    display: none;
+    display: none; /* No background images, not needed */
 }
 
+/* Text styling remains consistent */
 .services__card h2 {
     color: white;
     background-color: #131313;
@@ -408,6 +424,7 @@
     font-family: "Hubot Sans", serif;
 }
 
+/* Button styling */
 .services__card button {
     color: white;
     padding: 12px 24px;
@@ -419,7 +436,7 @@
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin: 20px auto;
+    margin: 20px auto; /* Center button */
     display: block;
     font-weight: 100;
     font-style: normal;
@@ -439,13 +456,13 @@
     }
 
     .services__card {
-        width: 90%;
+        width: 90%; /* Adjust width for smaller screens */
     }
 }
 
 @media screen and (max-width: 960px) {
     .services {
-        height: auto;
+        height: auto; /* Adjust height for responsiveness */
     }
 
     .services h1 {
@@ -460,18 +477,17 @@
     }
 
     .services__card {
-        width: 300px;
+        width: 300px; /* Adjust width for very small screens */
     }
 }
 
-/* FIXED: section background set to #1A1A1A */
 .why-choose-een {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 50px 10%;
-    background-color: #1A1A1A;
+    background-color: #131313;
     font-weight: normal;
     font-family: "Hubot Sans", serif;
     font-weight: 200;
@@ -479,10 +495,10 @@
     margin-top: 120px;
 }
 
-/* FIXED: button container background matches section */
+
 .button-container {
-    text-align: center;
-    padding: 20px;
+    text-align: center; /* Center-aligns the content of the container */
+    padding: 20px; /* Adds padding around the buttons for better spacing */
     font-weight: normal;
     font-family: "Hubot Sans", serif;
     font-weight: 200;
@@ -490,23 +506,20 @@
     margin-top: 100px;
 }
 
-/* FIXED: buttons background set to #1A1A1A, hover set to #004494 */
 .button-container button {
-    margin: 0 10px;
-    padding: 10px 20px;
-    background-color: #1A1A1A;
-    border: 2px solid white;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    margin: 0 10px; /* Adds horizontal spacing between buttons */
+    padding: 10px 20px; /* Adds padding inside the buttons for better touch */
+    background-color: transparent; /* Light grey background for the buttons */
+    border: 2px solid white; /* Grey border for the buttons */
+    font-size: 16px; /* Increases the font size for better readability */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
 }
 
 .button-container button:hover {
-    background-color: #004494;
+    background-color: #e1e1e1; /* Slightly darker background on hover */
 }
 
-/* FIXED: content block background #1A1A1A, removed floating box shadow */
+
 .content {
     display: flex;
     flex-direction: row;
@@ -515,15 +528,16 @@
     max-width: 1200px;
     width: 100%;
     text-align: left;
-    background-color: #1A1A1A;
-    padding: 40px;
+    background-color: #1A1A1A; 
+    padding: 20px;
     border-radius: 8px;
-    border: 1px solid #2a2a2a;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
     font-weight: normal;
     font-family: "Hubot Sans", serif;
     font-weight: 200;
     font-style: normal;
 }
+
 
 .text-container {
     flex: 2;
@@ -533,7 +547,7 @@
 
 .text-container h2 {
     font-size: 28px;
-    color: #fff;
+    color: #fff; /* Dark blue color */
     margin-top: 50px;
     margin-bottom: 25px;
     text-align: center;
@@ -566,6 +580,8 @@
     border-radius: 8px;
 }
 
+
+
 .info-content {
     display: flex;
     justify-content: space-between;
@@ -590,7 +606,7 @@
     color: #fff;
     padding: 10px 20px;
     font-size: 14px;
-    border: 2px solid #fff;
+    border: 2px solid #fff; /* Solid border for the button */
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
@@ -622,25 +638,19 @@
     }
 }
 
-/* FIXED: anchor-wrapped button height override also gets #1A1A1A background */
+
 .why-choose-een .button-container a button {
-    height: 70px;
-    background-color: #1A1A1A;
+    height: 70px;  /* Increase the height */
+    background: none;  /* Remove any background */
 }
 
-.why-choose-een .button-container a button:hover {
-    background-color: #004494;
-}
-
+/* Ensure other buttons remain unaffected */
 .why-choose-een .button-container button:not(:first-child) {
-    background-color: #1A1A1A;
+    background: none;  /* Resets background for other buttons */
 }
 
-.why-choose-een .button-container button:not(:first-child):hover {
-    background-color: #004494;
-}
+/*Footer CSS */
 
-/* Footer CSS */
 .footer__container {
     background-color: #141414;
     padding: 5rem 0;
@@ -707,6 +717,7 @@
     transition: 0.3s ease-out;
 }
 
+/* Social Icons */
 .social__icon--link {
     color: #fff;
     font-size: 24px;
@@ -746,7 +757,7 @@
 }
 
 .website__rights {
-    color: #fff;
+    color: #fff
 }
 
 @media screen and (max-width: 820px) {
@@ -788,6 +799,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    
 }
 
 .background-image {
@@ -802,22 +814,20 @@
     opacity: 0.75;
     z-index: 1;
 }
-
 .background-overlay {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity to make it darker */
+    z-index: 0; /* Ensures overlay is above the image but below the text */
 }
-
 .overlay-text {
     text-align: center;
     color: white;
     z-index: 2;
-    width: 80%;
+    width: 80%; /* Controls width to center content */
     margin-bottom: 20px;
     font-family: "Hubot Sans", serif;
     font-style: normal;
@@ -825,25 +835,24 @@
 }
 
 .expanding-line {
-    height: 2px;
-    background: white;
-    width: 0;
-    margin: 20px auto 0;
-    transition: width 0.5s ease-out;
+    height: 2px; /* Set the line thickness */
+    background: white; /* Line color */
+    width: 0; /* Start width, no visible line initially */
+    margin: 20px auto 0; /* Center the line horizontally */
+    transition: width 0.5s ease-out; /* Animation for line expansion */
 }
 
 .expanding-bar {
-    width: 5px;
-    background: white;
-    height: 0;
-    margin-left: auto;
+    width: 5px; /* Set the thickness of the vertical bar */
+    background: white; /* Bar color */
+    height: 0; /* Start height, no visible bar initially */
+    margin-left: auto; /* Center the bar next to the line */
     margin-right: auto;
-    transition: height 0.5s ease-out;
+    transition: height 0.5s ease-out; /* Animation for bar expansion */
     position: absolute;
-    left: 50%;
-    bottom: 10px;
+    left: 50%; /* Position in the center below the line */
+    bottom: 10px; /* Spacing from the bottom of the text */
 }
-
 .overlay-text h1 {
     font-size: 4.5rem;
     margin-bottom: 0.5rem;
@@ -855,14 +864,16 @@
     padding: 0;
 }
 
+
 .dynamic-weight {
-    font-weight: 200;
-    transition: font-weight 0.5s ease;
+    font-weight: 200; /* Default weight */
+    transition: font-weight 0.5s ease; /* Smooth transition for font weight change */
 }
 
 .bold {
     font-weight: 600;
 }
+
 
 .button-container {
     margin-top: 65px;
@@ -873,25 +884,28 @@
     font-weight: 200;
     font-style: normal;
     font-family: "Hubot Sans", serif;
+
 }
+
 
 .separator {
     background-color: white;
-    height: 50px;
+    height: 50px; /* Adjust based on your design preference */
     width: 2px;
     margin: 0 15px;
-    opacity: 0;
-    animation: extend 1s 0.5s forwards ease;
+    opacity: 0; /* Start hidden */
+    animation: extend 1s 0.5s forwards ease; /* Animation with delay */
 }
 
 .hero-section:hover .expanding-line {
-    width: 50%;
+    width: 50%; /* End width after expansion, adjust as needed */
 }
 
 .hero-section:hover .expanding-bar {
-    height: 30px;
+    height: 30px; /* End height after expansion, adjust as needed */
 }
 
+/* Animation to extend and show the separator */
 @keyframes extend {
     from {
         height: 0;
@@ -902,32 +916,31 @@
         opacity: 1;
     }
 }
-
 @media (max-width: 768px) {
     .button-container {
-        flex-wrap: wrap;
-        justify-content: space-around;
+        flex-wrap: wrap; /* Allows buttons to wrap onto the next line */
+        justify-content: space-around; /* Evenly spaces buttons within the container */
     }
-
     .overlay-text h1 {
         font-size: 3.5rem;
     }
 
     button, .separator {
-        flex-basis: 45%;
-        margin-bottom: 10px;
+        flex-basis: 45%; /* Sets the base size for buttons and separators */
+        margin-bottom: 10px; /* Adds space between rows of buttons */
     }
 
     .separator {
-        display: none;
+        display: none; /* Hides separators in mobile view for clarity */
     }
 }
 
+
 .home-value-form {
-    background-color: #1A1A1A;
-    color: #ffffff;
-    padding: 40px;
-    text-align: center;
+    background-color: #1A1A1A; /* Dark background for the form */
+    color: #ffffff; /* White text color */
+    padding: 40px; /* Padding around the content */
+    text-align: center; /* Centered text */
     font-weight: normal;
     font-family: "Hubot Sans", serif;
     font-weight: 200;
@@ -961,67 +974,66 @@
     font-family: "Hubot Sans", serif;
     font-weight: 200;
     font-style: normal;
-    text-align: center;
+    text-align:center;
 }
 
 .form-row {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
+    display: flex; /* Flexbox for inline fields */
+    justify-content: space-between; /* Space between the fields */
+    flex-wrap: wrap; /* Wrap onto the next line on small screens */
+    margin-bottom: 20px; /* Margin between rows */
 }
 
 .form-row input[type="text"],
 .form-row select {
-    flex: 1;
-    margin: 0 10px;
-    padding: 10px;
-    border: 1px solid #333;
-    background-color: #000;
-    color: #fff;
+    flex: 1; /* Flex grow to fill space */
+    margin: 0 10px; /* Margin for spacing */
+    padding: 10px; /* Padding inside the inputs */
+    border: 1px solid #333; /* Subtle border for inputs */
+    background-color: #000; /* Black background for inputs */
+    color: #fff; /* White text color */
 }
 
 .form-row input[type="text"]:first-child,
 .form-row input[type="text"]:last-child {
-    flex: 2;
+    flex: 2; /* Larger flex grow for specific fields */
 }
 
 button {
-    padding: 12px 20px;
-    background-color: transparent;
-    color: white;
-    border: 2px solid white;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    padding: 12px 20px; /* Padding inside the button */
+    background-color: transparent; /* Green background color */
+    color: white; /* White text color */
+    border: 2px solid white; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
 button:hover {
-    background-color: #003366;
+    background-color: #003366; /* Darker green on hover */
 }
 
 @media (max-width: 768px) {
     .form-row {
-        flex-direction: column;
+        flex-direction: column; /* Stack inputs vertically on small screens */
     }
 
     .form-row input,
     .form-row select {
-        flex: 1;
-        margin: 10px 0;
+        flex: 1; /* Full width on small screens */
+        margin: 10px 0; /* Margin for vertical stacking */
     }
 }
 
 .content-section {
     background-color: #131313;
     color: #ffffff;
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 20px;
+    max-width: 1200px; /* Adjust based on your design preference */
+    margin: auto; /* This centers the container */
+    padding: 0 20px; /* Adds padding on both sides */
 }
-
 .title, .description {
-    text-align: center;
-    margin-bottom: 20px;
+    text-align: center; /* Center align the text */
+    margin-bottom: 20px; /* Space between title and description */
 }
 
 .item {
@@ -1042,7 +1054,6 @@ button:hover {
     flex: 1;
     margin-left: 40px;
 }
-
 .image2 {
     flex: 1;
     margin-left: 10px;
@@ -1056,7 +1067,6 @@ button:hover {
     object-fit: cover;
     max-height: 300px;
 }
-
 .image2 img {
     width: 100%;
     height: auto;
@@ -1067,7 +1077,7 @@ button:hover {
 
 .buttons {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; /* Distributes space evenly around items */
     margin-top: 70px;
 }
 
@@ -1077,7 +1087,7 @@ button:hover {
     color: white;
     border: 2px solid white;
     cursor: pointer;
-    flex-grow: 1;
+    flex-grow: 1; /* Ensures all buttons grow equally */
     margin: 0 13px;
     font-family: "Hubot Sans", serif;
     font-weight: 200;
@@ -1101,7 +1111,6 @@ button:hover {
 .text h2, p {
     margin-left: 50px;
 }
-
 .text h2 {
     margin-bottom: 17px;
     font-family: "Hubot Sans", serif;
@@ -1151,9 +1160,10 @@ button:hover {
     }
 
     .buttons button {
-        margin: 5px 0;
+        margin: 5px 0; /* Adjusts spacing for vertical stacking */
     }
 }
+
 
 .stats-container {
     max-width: 1200px;
@@ -1184,8 +1194,8 @@ button:hover {
     position: absolute;
     left: 0;
     top: 0;
-    opacity: 0;
-    transition: transform 2s, opacity 2s;
+    opacity: 0; /* Line is initially invisible */
+    transition: transform 2s, opacity 2s; /* Smooth transition for transform and opacity */
 }
 
 .number {
@@ -1195,6 +1205,7 @@ button:hover {
     font-family: "Hubot Sans", serif;
     font-weight: 200;
     font-style: normal;
+
 }
 
 p {
