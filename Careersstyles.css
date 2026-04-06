@@ -641,6 +641,7 @@ blockquote cite {
 
 .application-form input[type="text"],
 .application-form input[type="email"],
+.application-form input[type="phone"],
 .application-form input[type="file"],
 .application-form textarea {
     color: var(--text-primary);
