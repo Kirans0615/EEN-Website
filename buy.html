@@ -25,7 +25,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/2.9.7/barba.umd.min.js"></script>
 </head>
-<body>
+<body class="has-js">
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="navbar__container">
@@ -67,7 +70,7 @@
         <div class="hero-overlay"></div>
         <div class="overlay-text">
             <span class="eyebrow">Find Your Perfect Property</span>
-            <h1>Buy With Us</h1>
+            <h1 data-text-reveal>Buy With Us</h1>
             <div class="expanding-line"></div>
         </div>
     </section>
@@ -75,21 +78,21 @@
        <!-- Services Section -->
     <div class="services">
         <div class="services__container card-grid">
-            <div class="services__card card">
+            <div class="services__card card tilt-card">
                 <h2>Discover Your Next Property</h2>
                 <p>Connect with us to access exclusive listings tailored to you</p>
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=empowerestatesnet@gmail.com&su=Request for Cash Offer&body=Hello Empower Estates Network!,%0D%0A%0D%0A[Message]. Please contact me with more details about the process and what information you need from me.%0D%0A%0D%0A[Name, Phone, Email]" style="text-decoration: none;" target="_blank">
                     <button class="btn-magnetic">Contact US</button>
                 </a>
             </div>
-            <div class="services__card card">
+            <div class="services__card card tilt-card">
                 <h2>Schedule a Consultation</h2>
                 <p>Click below to have access to our calendar to schedule a meeting with our head agents</p>
                 <a href="https://calendly.com/empowerestatesnet" style="text-decoration: none;" target="_blank">
                     <button>Schedule Here</button>
                 </a>
             </div>
-            <div class="services__card card">
+            <div class="services__card card tilt-card">
                 <h2>Guides and Tips</h2>
                 <p>Click below to access our guides for buying in the current market</p>
                 <a href="https://www.canva.com/design/DAGfVEKVRR8/b1pCdt_VVW-DCQhGG7FbMw/view?utm_content=DAGfVEKVRR8&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h1ba5005c95" style="text-decoration: none;" target="_blank">
@@ -123,7 +126,7 @@
       
             <!-- Property Slide 1 -->
             <div class="swiper-slide">
-              <div class="property-slide-card for-sale">
+              <div class="property-slide-card tilt-card for-sale">
                 <div class="swiper inner-swiper">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide"><a href="https://www.facebook.com/marketplace/item/1395535368878930/"target="_blank"><img src="elderberry-front.png" alt="Elderberry Front"></a></div>
@@ -143,7 +146,7 @@
       
             <!-- Property Slide 2 -->
             <div class="swiper-slide">
-              <div class="property-slide-card sold">
+              <div class="property-slide-card tilt-card sold">
                 <div class="swiper inner-swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"><a href="https://investorlift.com/p/228840?preview=97ee6a"target="_blank"><img src="6073840.jpg" alt="Holly 1"></a></div>
@@ -161,7 +164,7 @@
       
             <!-- Property Slide 3 -->
             <div class="swiper-slide">
-              <div class="property-slide-card for-sale">
+              <div class="property-slide-card tilt-card for-sale">
                 <div class="swiper inner-swiper">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide"><a href="https://www.facebook.com/share/1JCJu3fbJK/"target="_blank"><img src="pine-front.JPG" alt="8700 Pine Ave Bowie MD exterior front" data-higgsfield-prompt="Professional exterior real estate photograph of a modest two-bedroom single-family home in Bowie Maryland, clean curb appeal, trimmed grass, clear blue sky, warm afternoon light" data-higgsfield-role="property-8700-pine-front"></a></div>
@@ -183,7 +186,7 @@
       
             <!-- Property Slide 4 -->
             <div class="swiper-slide">
-              <div class="property-slide-card for-sale">
+              <div class="property-slide-card tilt-card for-sale">
                 <div class="swiper inner-swiper">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide"><a href="https://www.facebook.com/share/1CEGUzhVLM/"target="_blank"><img src="Furnace1.png" alt="Furnace1"></a></div>
@@ -249,7 +252,7 @@
                 </div>
             </div>
             <div class="image-container2">
-                <img src="home2back.jpg" alt="Beautiful home backyard and exterior" loading="lazy" data-higgsfield-prompt="Stunning home exterior with lush backyard, professional real estate photo, EEN branded Maryland property" data-higgsfield-role="content-image">
+                <img class="img-reveal" src="home2back.jpg" alt="Beautiful home backyard and exterior" loading="lazy" data-higgsfield-prompt="Stunning home exterior with lush backyard, professional real estate photo, EEN branded Maryland property" data-higgsfield-role="content-image">
             </div>
         </div>
     
@@ -399,6 +402,7 @@
         });
       </script>
         <script src="animations.js"></script>
+        <script src="motion-enhanced.js"></script>
 </body>
     </html>
     

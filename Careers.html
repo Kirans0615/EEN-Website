@@ -21,7 +21,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/2.9.7/barba.umd.min.js"></script>
 </head>
-<body>
+<body class="has-js">
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <!-- NAVBAR -->
     <nav class="navbar" role="navigation" aria-label="Main navigation">
@@ -51,7 +54,7 @@
     <!-- HERO -->
     <section class="hero-section">
         <div class="overlay-text">
-            <h1>Internships &amp; Careers</h1>
+            <h1 data-text-reveal>Internships &amp; Careers</h1>
             <p>Start your career in real estate with real-world experience at Empower Estates Network.</p>
             <div class="expanding-line"></div>
         </div>
@@ -80,7 +83,7 @@
     <div class="services">
         <h1>Find a Job That Fits You</h1>
         <div class="services__container">
-            <div class="services__card">
+            <div class="services__card tilt-card">
                 <div class="card__content">
                     <h2>Our Internship Program</h2>
                     <p>Jumpstart your real estate career with hands-on experience</p>
@@ -89,7 +92,7 @@
                     </a>
                 </div>
             </div>
-            <div class="services__card card--alt">
+            <div class="services__card card--alt tilt-card">
                 <div class="card__content">
                     <h2>Other Careers</h2>
                     <p>Join Our Team Today</p>
@@ -230,5 +233,6 @@
     </main>
     <script src="app.js"></script>
     <script src="animations.js"></script>
+    <script src="motion-enhanced.js"></script>
 </body>
 </html>

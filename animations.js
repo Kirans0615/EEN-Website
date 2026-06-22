@@ -57,7 +57,7 @@
           end: 'bottom top',
           scrub: true
         },
-        yPercent: 22,
+        yPercent: 28,
         ease: 'none'
       });
     });

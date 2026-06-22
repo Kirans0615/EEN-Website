@@ -25,7 +25,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/2.9.7/barba.umd.min.js"></script>
 </head>
-<body>
+<body class="has-js">
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="navbar__container">
@@ -69,7 +72,7 @@
         <div class="hero-overlay"></div>
         <div class="overlay-text">
             <span class="eyebrow">Maryland's Trusted Real Estate Network</span>
-            <h1>Empower Estates Network</h1>
+            <h1 data-text-reveal>Empower Estates Network</h1>
             <h2>
                 <span id="sellSmart" class="dynamic-weight">Sell Smart</span>,
                 <span id="buySmart" class="dynamic-weight">Buy Smart</span>,
@@ -83,6 +86,19 @@
            <a href="/about.html" class="btn-outline">About Us</a>
         </div>
     </section>
+
+    <!-- Trust marquee -->
+    <div class="marquee-wrap" aria-hidden="true">
+      <div class="marquee-track">
+        <span class="marquee-item">Maryland Licensed</span>
+        <span class="marquee-item">100+ Homes Sold</span>
+        <span class="marquee-item">Investor Network</span>
+        <span class="marquee-item">Cash Offers</span>
+        <span class="marquee-item">College-Powered Team</span>
+        <span class="marquee-item">Dayton Ohio</span>
+        <span class="marquee-item">100% Satisfaction</span>
+      </div>
+    </div>
 
     <section class="property-gallery fade-in-up-hidden">
         <h2 class="section-heading centered">Featured Properties</h2>
@@ -289,14 +305,14 @@
        <div class="services">
            <h1 class="section-heading centered">Sell Your Home on Your Terms</h1>
            <div class="services__container card-grid">
-               <div class="services__card card">
+               <div class="services__card card tilt-card">
                    <h2>How We Work</h2>
                    <p>Reputable Partners</p>
                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=empowerestatesnet@gmail.com&su=Request for Cash Offer&body=Hello Empower Estates Network!,%0D%0A%0D%0AI am interested in receiving a cash offer for my property [Insert Address]. Please contact me with more details about the process and what information you need from me.%0D%0A%0D%0A[Name, Phone, Email]" target="_blank">
                     <button>Get a Cash Offer Today</button>
                 </a>
                </div>
-               <div class="services__card card">
+               <div class="services__card card tilt-card">
                    <h2>Empowering The Community One Property At a Time</h2>
                    <p>Testimonials</p>
                    <a href="/about.html" target="_blank">
@@ -313,7 +329,7 @@
         <div class="testimonials" style="margin-top: 50px;"required>
             <h2 class="section-heading">Hear From Our Clients and Collaborators</h2>
             <div class="testimonials-container card-grid">
-                <div class="testimonial card">
+                <div class="testimonial card tilt-card">
                     <img src="felipe.jpeg" alt="Felipe G., FD Title Founder and President" loading="lazy">
                     <p>"Working with Empower Estates Network has been a seamless and professional experience. Their team brings integrity, drive, and a clear commitment to helping both sellers and buyers through every transaction"</p>
                     <div class="stars">
@@ -325,7 +341,7 @@
                     </div>
                     <span>Felipe G. FD Title Founder & President.</span>
                 </div>
-                <div class="testimonial card">
+                <div class="testimonial card tilt-card">
                     <img src="blank.webp" alt="Vesal B., EEN Student Intern" loading="lazy">
                     <p>"During my internship I was involved in various transactions and client meetings. This hands-on experience allowed me to participate in the intricacies of real estate contracts, client relations, and deal closures. I can’t wait to work with them again!"</p>
                     <div class="stars">
@@ -447,6 +463,7 @@
         });
       </script>
         <script src="animations.js"></script>
+        <script src="motion-enhanced.js"></script>
 </body>
     </html>
     

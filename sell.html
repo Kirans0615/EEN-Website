@@ -23,7 +23,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/2.9.7/barba.umd.min.js"></script>
 </head>
-<body>
+<body class="has-js">
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="navbar__container">
@@ -65,7 +68,7 @@
         <div class="hero-overlay"></div>
         <div class="overlay-text">
             <span class="eyebrow">Sell On Your Terms</span>
-            <h1>Sell With Us</h1>
+            <h1 data-text-reveal>Sell With Us</h1>
             <div class="expanding-line"></div>
         </div>
     </section>
@@ -88,12 +91,12 @@
                 </div>
             </div>
             <div class="image1">
-                <img src="dance.jpg" alt="EEN team celebrating a successful home sale" loading="lazy" data-higgsfield-prompt="Young professional real estate team celebrating a home sale, warm lighting, EEN navy and gold brand colors" data-higgsfield-role="content-image">
+                <img class="img-reveal" src="dance.jpg" alt="EEN team celebrating a successful home sale" loading="lazy" data-higgsfield-prompt="Young professional real estate team celebrating a home sale, warm lighting, EEN navy and gold brand colors" data-higgsfield-role="content-image">
             </div>
         </div>
         <div class="item image-text">
             <div class="image2">
-                <img src="seahouse.jpg" alt="Waterfront property for sale" loading="lazy" data-higgsfield-prompt="Beautiful waterfront Maryland home exterior, sunny day, professional real estate photo, EEN branded" data-higgsfield-role="content-image">
+                <img class="img-reveal" src="seahouse.jpg" alt="Waterfront property for sale" loading="lazy" data-higgsfield-prompt="Beautiful waterfront Maryland home exterior, sunny day, professional real estate photo, EEN branded" data-higgsfield-role="content-image">
             </div>
             <div class="text">
                 <h2 class="section-heading">Maximizing Your Value</h2>
@@ -150,7 +153,7 @@
                 </div>
             </div>
             <div class="image-container2">
-                <img src="signdeal.jpg" alt="Clients signing a real estate deal" loading="lazy" data-higgsfield-prompt="Overhead flat-lay of a real estate closing — contract document, pen, house keys, and a small house model on a clean wooden desk, warm neutral tones, professional photography" data-higgsfield-role="sell-signing">
+                <img class="img-reveal" src="signdeal.jpg" alt="Clients signing a real estate deal" loading="lazy" data-higgsfield-prompt="Overhead flat-lay of a real estate closing — contract document, pen, house keys, and a small house model on a clean wooden desk, warm neutral tones, professional photography" data-higgsfield-role="sell-signing">
             </div>
         </div>
     
@@ -244,6 +247,7 @@
         </main>
    <script src="app.js"></script>
         <script src="animations.js"></script>
+        <script src="motion-enhanced.js"></script>
 </body>
     </html>
     
