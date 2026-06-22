@@ -15,8 +15,8 @@
     --text-primary: #ffffff;
     --text-muted:   #999999;
     --border:       rgba(255,255,255,0.15);
-    --accent:       #C8973A;
-    --accent-hover: #E8C87A;
+    --accent:       #ffffff;
+    --accent-hover: #cccccc;
     --font-main:    var(--font-body, "Inter", system-ui, sans-serif);
     --radius:       var(--radius-btn, 6px);
     --transition:   var(--transition, 0.22s ease);
@@ -40,7 +40,7 @@ body {
    NAVBAR
    ============================================================ */
 .navbar {
-    background: #1A3A5C;
+    background: #000000;
     height: 72px;
     display: flex;
     justify-content: center;
@@ -48,7 +48,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 999;
-    border-bottom: 2px solid rgba(200,151,58,0.4);
+    border-bottom: 2px solid rgba(255,255,255,0.12);
 }
 
 .navbar__container {
@@ -712,7 +712,7 @@ blockquote cite {
 .submit-button {
     margin-top: 20px;
     background-color: var(--accent);
-    color: #1A3A5C;
+    color: #000000;
     padding: 14px 28px;
     border: none;
     border-radius: var(--radius);
@@ -734,7 +734,7 @@ blockquote cite {
    FOOTER
    ============================================================ */
 .footer__container {
-    background-color: #1A3A5C;
+    background-color: #000000;
     border-top: 2px solid var(--accent);
     padding: 4rem 24px 2rem;
     display: flex;

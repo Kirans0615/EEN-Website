@@ -1,13 +1,13 @@
 /* EEN Design System — Brand Tokens */
 :root {
-  --color-primary: #1A3A5C;
-  --color-accent: #C8973A;
-  --color-accent-light: #E8C87A;
-  --color-bg: #F8F6F2;
-  --color-surface: #FFFFFF;
-  --color-text: #1C1C1E;
-  --color-text-muted: #5A5A6A;
-  --color-border: #DDD9D0;
+  --color-primary: #000000;
+  --color-accent: #ffffff;
+  --color-accent-light: #cccccc;
+  --color-bg: #000000;
+  --color-surface: #0f0f0f;
+  --color-text: #ffffff;
+  --color-text-muted: #888888;
+  --color-border: rgba(255,255,255,0.1);
 
   --font-display: 'Playfair Display', Georgia, serif;
   --font-body: 'Inter', system-ui, sans-serif;
