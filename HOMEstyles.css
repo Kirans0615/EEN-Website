@@ -518,6 +518,7 @@ body, html {
 .form-row {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 12px;
   margin-bottom: 12px;
 }
@@ -558,6 +559,21 @@ body, html {
   height: 42px;
   margin-bottom: 12px;
   transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.form-row .form-label {
+  flex-shrink: 0;
+  align-self: center;
+  margin-bottom: 0;
+  white-space: nowrap;
+  color: rgba(255,255,255,0.6);
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+.quote-form .form-label:not(:is(.form-row *)) {
+  display: block;
+  margin-bottom: 5px;
 }
 
 .quote-form label.consent-label,
