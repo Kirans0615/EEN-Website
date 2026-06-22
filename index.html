@@ -5,31 +5,25 @@
      crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Empower Estates Network — Buy, sell, and grow with Maryland's trusted real estate team. Get a free home value quote today.">
+    <meta property="og:title" content="Empower Estates Network">
+    <meta property="og:description" content="Buy, sell, and grow with Maryland's trusted real estate team.">
+    <meta property="og:image" content="een-hero-home.png">
+    <meta property="og:type" content="website">
     <title>Empower Estates Network</title>
-    <link rel="stylesheet" href="HOMEstyles.css">
     <link rel="icon" type="image/x-icon" href="4ucJ4UYa.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hubot+Sans:ital,wght@0,200..900;1,200..900&family=Rubik+Mono+One&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.typekit.net/your-kit-id.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="HOMEstyles.css">
     <script src="https://kit.fontawesome.com/a705a48688.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
-    
-    </div>
-    <nav class="navbar">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="navbar__container">
             <a href="/index.html">
                 <img src="final just logo.PNG" width="120" alt="Empower Estates Network Logo">
@@ -38,11 +32,11 @@
             <div class="navbar__toggle" id="mobile-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
-                <span the="bar"></span>
+                <span class="bar"></span>
             </div>
             <ul class="navbar__menu">
                 <li class="navbar__item">
-                    <a href="/index.html" class="navbar__links">Home</a>
+                    <a href="/index.html" class="navbar__links active" aria-current="page">Home</a>
                 </li>
                 <li class="navbar__item">
                     <a href="/buy.html" class="navbar__links">Buy</a>
@@ -63,8 +57,10 @@
         </div>
        </nav>
 
+    <main id="main-content">
        <section class="hero-section">
-        <div class="background-image"></div>
+        <div class="background-image" role="img" aria-label="Aerial view of a Maryland neighborhood" data-higgsfield-prompt="Aerial view of a warm Maryland residential neighborhood at golden hour, lush green trees, winding streets, suburban homes — brand reference EEN logo navy and gold" data-higgsfield-role="hero-background"></div>
+        <div class="hero-overlay"></div>
         <div class="overlay-text">
             <h1>Empower Estates Network</h1>
             <h2>
@@ -74,18 +70,14 @@
             </h2>
         </div>
         <div class="button-container">
-           <button onclick="location.href='/buy'">Buy From Us</button>
-           <div class="separator"></div>
-           <button onclick="location.href='/sell'">Sell With Us</button>
-           <div class="separator"></div>
-           <button onclick="location.href='/Careers'">Work at EEN</button>
-           <div class="separator"></div>
-           <button onclick="location.href='/about'">About Us</button>
-
+           <a href="/buy.html" class="btn-primary">Buy From Us</a>
+           <a href="/sell.html" class="btn-outline">Sell With Us</a>
+           <a href="/Careers.html" class="btn-outline">Work at EEN</a>
+           <a href="/about.html" class="btn-outline">About Us</a>
         </div>
     </section>
 
-    <section class="property-gallery">
+    <section class="property-gallery fade-in-up-hidden">
         <h2>Featured Properties</h2>
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
@@ -95,8 +87,8 @@
               <div class="property-slide-card for-sale">
                 <div class="swiper inner-swiper">
                   <div class="swiper-wrapper">
-                    <div class="swiper-slide"><a href="https://www.facebook.com/marketplace/item/1395535368878930/"target="_blank"><img src="elderberry-front.png" alt="Elderberry Front"></a></div>
-                    <div class="swiper-slide"><a href="https://www.facebook.com/marketplace/item/1395535368878930/"target="_blank"><img src="elderberry-2.png" alt="Elderberry 2"></a></div>
+                    <div class="swiper-slide"><a href="https://www.facebook.com/marketplace/item/1395535368878930/"target="_blank"><img src="elderberry-front.png" alt="3629 Elderberry Ave front exterior" loading="lazy"></a></div>
+                    <div class="swiper-slide"><a href="https://www.facebook.com/marketplace/item/1395535368878930/"target="_blank"><img src="elderberry-2.png" alt="3629 Elderberry Ave interior" loading="lazy"></a></div>
                     <div class="swiper-slide"><a href="https://www.facebook.com/marketplace/item/1395535368878930/"target="_blank"><img src="elderberry-3.png" alt="Elderberry 3"></a></div>
                     <div class="swiper-slide"><a href="https://www.facebook.com/marketplace/item/1395535368878930/"target="_blank"><img src="elderberry-4.png" alt="Elderberry 4"></a></div>
                     <div class="swiper-slide"><a href="https://www.facebook.com/marketplace/item/1395535368878930/"target="_blank"><img src="elderberry-4.png" alt="Elderberry 5"></a></div>
@@ -180,14 +172,19 @@
     
     <form method="POST" class="quote-form" name="home-value-form" data-netlify="true">
         <div class="form-row">
+            <label for="fullName" class="sr-only">Full Name</label>
             <input type="text" id="fullName" name="fullName" placeholder="Full Name" style="height: 30px; margin-top: 50px;" required>
+            <label for="phoneNumber" class="sr-only">Phone Number</label>
             <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" style="height: 30px; margin-top: 50px;" required>
         </div>
         <div class="form-row">
+            <label for="streetAddress" class="sr-only">Street Address</label>
             <input type="text" id="streetAddress" name="streetAddress" placeholder="Street Address" style="height: 30px; margin-top: 14px;" required>
+            <label for="city" class="sr-only">City</label>
             <input type="text" id="city" name="city" placeholder="City" style="height: 30px; margin-top: 14px;" required>
         </div>
         <div class="form-row">
+            <label for="state" class="sr-only">State</label>
             <select id="state" name="state" style="height: 35px; width: 470px; margin-top: 14px;" required>
                 <option value="">Select State</option>
                     <option value="AL">Alabama</option>
@@ -242,8 +239,10 @@
                     <option value="WI">Wisconsin</option>
                     <option value="WY">Wyoming</option>
                 </select>
+            <label for="zipCode" class="sr-only">Zip Code</label>
             <input type="text" id="zipCode" name="zipCode" placeholder="Zip Code" style="height: 35px; margin-left: 10px; margin-top: 14px" required>
         </div>
+        <label for="foundUs" class="sr-only">How did you find us?</label>
         <select name="foundUs" id="foundUs" style="height: 35px; margin-top: 4px;" required>
             <option value="">How did you find us?</option>
             <option value="google">Google</option>
@@ -302,13 +301,13 @@
 
        <section class="client-section">
         <div class="client-image">
-            <img src="chewy.jpg" alt="Featured Client">
+            <img src="chewy.jpg" alt="Featured client property" loading="lazy" data-higgsfield-prompt="Professional real estate photo of a well-maintained home exterior, Maryland suburb, EEN navy and gold branding" data-higgsfield-role="client-photo">
         </div>
         <div class="testimonials" style="margin-top: 50px;"required>
             <h2>Hear From Our Clients and Collaborators</h2>
             <div class="testimonials-container">
                 <div class="testimonial">
-                    <img src="felipe.jpeg" alt="Felipe G. Supreme Lending Branch Manager">
+                    <img src="felipe.jpeg" alt="Felipe G., FD Title Founder and President" loading="lazy">
                     <p>"Working with Empower Estates Network has been a seamless and professional experience. Their team brings integrity, drive, and a clear commitment to helping both sellers and buyers through every transaction"</p>
                     <div class="stars">
                         <i class="fa fa-star"></i>
@@ -320,7 +319,7 @@
                     <span>Felipe G. FD Title Founder & President.</span>
                 </div>
                 <div class="testimonial">
-                    <img src="blank.webp" alt="Vesal B. Student">
+                    <img src="blank.webp" alt="Vesal B., EEN Student Intern" loading="lazy">
                     <p>"During my internship I was involved in various transactions and client meetings. This hands-on experience allowed me to participate in the intricacies of real estate contracts, client relations, and deal closures. I can’t wait to work with them again!"</p>
                     <div class="stars">
                         <i class="fa fa-star"></i>
@@ -390,6 +389,7 @@
     </div>
 </div>
     
+    </main>
        <script src="app.js"></script>
        <script>
         document.addEventListener("DOMContentLoaded", function () {

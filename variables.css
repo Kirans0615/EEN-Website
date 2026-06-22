@@ -1,0 +1,77 @@
+/* EEN Design System — Brand Tokens */
+:root {
+  --color-primary: #1A3A5C;
+  --color-accent: #C8973A;
+  --color-accent-light: #E8C87A;
+  --color-bg: #F8F6F2;
+  --color-surface: #FFFFFF;
+  --color-text: #1C1C1E;
+  --color-text-muted: #5A5A6A;
+  --color-border: #DDD9D0;
+
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  --radius-card: 12px;
+  --radius-btn: 6px;
+  --shadow-card: 0 4px 24px rgba(0,0,0,0.08);
+  --shadow-card-hover: 0 8px 40px rgba(0,0,0,0.14);
+
+  --transition: 0.22s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  background: var(--color-accent);
+  color: var(--color-primary);
+  padding: 8px 16px;
+  border-radius: var(--radius-btn);
+  font-family: var(--font-body);
+  font-weight: 600;
+  text-decoration: none;
+  z-index: 10000;
+  transition: top 0.2s;
+}
+.skip-link:focus {
+  top: 16px;
+}
+
+/* Scroll-fade-in animation */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-in-up {
+  animation: fadeInUp 0.5s ease forwards;
+}
+.fade-in-up-hidden {
+  opacity: 0;
+  transform: translateY(20px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .fade-in-up, .fade-in-up-hidden {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+}
+
+/* Screen-reader only utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}

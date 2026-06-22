@@ -9,17 +9,17 @@
 }
 
 :root {
-    --bg-primary:   #131313;
-    --bg-secondary: #181818;
-    --bg-card:      #1a1a1a;
+    --bg-primary:   #141414;
+    --bg-secondary: #1a1a1a;
+    --bg-card:      #1e1e1e;
     --text-primary: #ffffff;
     --text-muted:   #999999;
     --border:       rgba(255,255,255,0.15);
-    --accent:       #004494;
-    --accent-hover: #0056b3;
-    --font-main:    "Hubot Sans", serif;
-    --radius:       6px;
-    --transition:   0.25s ease;
+    --accent:       #C8973A;
+    --accent-hover: #E8C87A;
+    --font-main:    var(--font-body, "Inter", system-ui, sans-serif);
+    --radius:       var(--radius-btn, 6px);
+    --transition:   var(--transition, 0.22s ease);
 }
 
 html {
@@ -40,7 +40,7 @@ body {
    NAVBAR
    ============================================================ */
 .navbar {
-    background: var(--bg-primary);
+    background: #1A3A5C;
     height: 72px;
     display: flex;
     justify-content: center;
@@ -48,7 +48,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 999;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 2px solid rgba(200,151,58,0.4);
 }
 
 .navbar__container {
@@ -95,7 +95,7 @@ body {
 
 .navbar__links:hover,
 .navbar__links.active {
-    color: #aaa;
+    color: var(--accent);
 }
 
 .navbar__btn {
@@ -712,13 +712,13 @@ blockquote cite {
 .submit-button {
     margin-top: 20px;
     background-color: var(--accent);
-    color: var(--text-primary);
+    color: #1A3A5C;
     padding: 14px 28px;
     border: none;
     border-radius: var(--radius);
     font-family: var(--font-main);
     font-size: 1rem;
-    font-weight: 350;
+    font-weight: 600;
     cursor: pointer;
     width: 100%;
     transition: background var(--transition);
@@ -734,15 +734,14 @@ blockquote cite {
    FOOTER
    ============================================================ */
 .footer__container {
-    background-color: #141414;
-    padding: 5rem 0;
+    background-color: #1A3A5C;
+    border-top: 2px solid var(--accent);
+    padding: 4rem 24px 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-weight: normal;
-    font-family: "Hubot Sans", serif;
-    font-weight: 200;
+    font-family: var(--font-main);
     font-style: normal;
 }
 

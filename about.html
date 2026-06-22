@@ -5,31 +5,27 @@
      crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empower Estates Network</title>
-    <link rel="stylesheet" href="ABOUTstyles.css">
+    <meta name="description" content="Learn about Empower Estates Network — our founders, mission, and commitment to empowering communities through real estate.">
+    <meta property="og:title" content="About Empower Estates Network">
+    <meta property="og:description" content="Meet the team behind EEN and discover how we're changing real estate in Maryland.">
+    <meta property="og:type" content="website">
+    <title>About Empower Estates Network</title>
     <link rel="icon" type="image/x-icon" href="4ucJ4UYa.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hubot+Sans:ital,wght@0,200..900;1,200..900&family=Rubik+Mono+One&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.typekit.net/your-kit-id.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="ABOUTstyles.css">
     <script src="https://kit.fontawesome.com/a705a48688.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav class="navbar">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="navbar__container">
-            <a href="/index.html" id="navbar__logo">
+            <a href="/index.html">
                 <img src="final just logo.PNG" width="120" alt="Empower Estates Network Logo">
             </a>
-            <div class="navbar__toggle" id="mobile-menu">
+            <div class="navbar__toggle" id="mobile-menu" aria-label="Toggle navigation" aria-expanded="false">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -48,53 +44,64 @@
                     <a href="/Careers.html" class="navbar__links">Careers</a>
                 </li>
                 <li class="navbar__item">
-                    <a href="/about.html" class="navbar__links">About Us</a>
+                    <a href="/about.html" class="navbar__links active" aria-current="page">About Us</a>
                 </li>
                 <li class="navbar__btn">
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=empowerestatesnet@gmail.com" target="_blank"class="button">Email Us Here</a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=empowerestatesnet@gmail.com" target="_blank" class="button">Email Us Here</a>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <header class="main-header">
+    <main id="main-content">
+
+    <section class="hero">
         <h1>About Empower Estates Network</h1>
-    </header>
+        <div class="accent-line"></div>
+    </section>
 
-    <section class="about-us">
-        <h2>At Empower Estates Network, we take pride in partnering with you to navigate the often stressful and confusing real estate market.</h2>
-        <p>Our management team consists of both partners, Alessandro and Kiran. Together, we possess the skills to lead others, be open to innovation, treat all employees and workers as a part of one collaborative team, and promote growth in all aspects of our business employee's lives.</p>
-        <p>In times of uncertainty, it is more important than ever to trust leaders in the field that have a proven track record for success. </p>
-        <div class="buttons">
-            <a href="https://www.linkedin.com/company/empower-estates-network/" style="text-decoration: none;" target="_blank">
-                <button>EEN Linkedin</button>
-            </a>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kirans0615@gmail.com" style="text-decoration: none;" target="_blank">
-                <button>Email a Co-Founder</button>
-            </a>
+    <div class="about-us">
+        <div class="about-us__text">
+            <h2>At Empower Estates Network, we take pride in partnering with you to navigate the often stressful and confusing real estate market.</h2>
+            <p>Our management team consists of both partners, Alessandro and Kiran. Together, we possess the skills to lead others, be open to innovation, treat all employees and workers as a part of one collaborative team, and promote growth in all aspects of our business employee's lives.</p>
+            <p>In times of uncertainty, it is more important than ever to trust leaders in the field that have a proven track record for success.</p>
+            <div class="buttons" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:1.5rem;">
+                <a href="https://www.linkedin.com/company/empower-estates-network/" style="text-decoration: none;" target="_blank">
+                    <button style="background:var(--color-primary);color:white;border:none;padding:0.7rem 1.4rem;border-radius:var(--radius-btn);font-family:var(--font-body);font-weight:600;cursor:pointer;">EEN LinkedIn</button>
+                </a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kirans0615@gmail.com" style="text-decoration: none;" target="_blank">
+                    <button style="background:var(--color-primary);color:white;border:none;padding:0.7rem 1.4rem;border-radius:var(--radius-btn);font-family:var(--font-body);font-weight:600;cursor:pointer;">Email a Co-Founder</button>
+                </a>
+            </div>
+        </div>
+        <div class="about-us__quote">
+            <blockquote>
+                Together, we are turning vision into reality — one property, one student, one community at a time.
+            </blockquote>
+            <cite>— Co-founders, Kiran Sen &amp; Alessandro Marra</cite>
+        </div>
+    </div>
+
+    <section class="founders">
+        <div class="founders__inner">
+            <h2>Meet Our Founders</h2>
+            <p>Dream to Reality — A Word From Our Founders</p>
+            <div class="founders__grid">
+                <div class="founder-card">
+                    <img src="ale-kiran.jpg" alt="Founders Alessandro Marra and Kiran Sen" loading="lazy" data-higgsfield-prompt="Two professional male co-founders in business casual attire, confident and approachable, modern office background, EEN navy and gold brand colors" data-higgsfield-role="founders-portrait">
+                    <div class="founders-text">
+                        <h3>Alessandro &amp; Kiran</h3>
+                        <p class="role">Co-Founders, Empower Estates Network</p>
+                        <p>At Empower Estates Network (EEN), we share a vision of leadership, innovation, and collaboration. Our mission is not only to build a successful real estate network but also to cultivate an environment where both our team and clients thrive. We believe in treating every team member as part of a unified, collaborative force, where growth and development extend beyond business goals to personal and professional enrichment.</p>
+                        <p style="margin-top:0.8rem;">Our strengths lie in strategic thinking, adaptability, communication, and productivity, allowing us to prioritize tasks efficiently and drive innovation. Beyond real estate transactions, we are passionate about mentorship and education. We actively engage with students, introducing them to real-world experiences by integrating them into our company's workflow through streamlined, impactful tasks.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="leadership" style="background-color: #131313; color: #ffffff;">
-        <div class="container">
-            <div class="founders-image">
-                <img src="ale-kiran.jpg" alt="Founders Alessandro and Kiran" style="width: 365px; height: auto; border-radius: 5px;">
-            </div>
-            <div class="founders-text">
-                <h3>Dream to Reality</h3>
-                <p>A Word From Our Founders</p>
-                <p>At Empower Estates Network (EEN), we share a vision of leadership, innovation, and collaboration. Our mission is not only to build a successful real estate network but also to cultivate an environment where both our team and clients thrive. We believe in treating every team member as part of a unified, collaborative force, where growth and development extend beyond business goals to personal and professional enrichment. </p>
-                <p>Our strengths lie in strategic thinking, adaptability, communication, and productivity, allowing us to prioritize tasks efficiently and drive innovation. As founders, we are committed to inspiring, guiding, and empowering those around us—whether it’s our team members or the clients we serve. Beyond real estate transactions, we are passionate about mentorship and education. We will actively engage with students, introducing them to real-world experiences by integrating them into our company’s workflow through streamlined, impactful tasks. This initiative not only increases operational efficiency but also provides aspiring professionals with hands-on learning opportunities. </p>
-                <p>Together, we are turning vision into reality.</p>
-            
-                <footer>
-                    <p>— Co-founders, Kiran Sen & Alessandro Marra</p>
-                </footer>
-            </div>
-        </div>
-    </section>
+    </main>
 
-         <!-- Footer Section -->
        <div class="footer__container">
            <div class="footer__links">
                <div class="footer__link--wrapper">
@@ -111,7 +118,6 @@
                        <a href="https://www.linkedin.com/company/empower-estates-network/" target="_blank">LinkedIn</a>
                        <a href="https://www.instagram.com/empowerestatesnetwork/" target="_blank">Instagram</a>
                    </div>
-                  
                </div>
            </div>
         <div class="social__media">
@@ -139,6 +145,7 @@
         </div>
     </div>
 </div>
+
     <script src="app.js"></script>
 </body>
 </html>
