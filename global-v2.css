@@ -1,0 +1,193 @@
+/* ============================================================
+   EEN Global V2 — Layout, Animation & Structural Layer
+   B&W edition: uses existing variables.css tokens
+   ============================================================ */
+
+/* ── Noise texture on dark sections ─────────────────────────── */
+.section-dark {
+  position: relative;
+  overflow: hidden;
+}
+.section-dark::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+.section-dark > * { position: relative; z-index: 1; }
+
+/* ── Cards ───────────────────────────────────────────────────── */
+.card {
+  background: var(--color-surface, #1a1a1a);
+  border: 1px solid var(--color-border, rgba(255,255,255,0.1));
+  border-radius: 14px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.45);
+  transition: transform 0.25s cubic-bezier(0.4,0,0.2,1),
+              box-shadow 0.25s cubic-bezier(0.4,0,0.2,1),
+              border-color 0.25s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 56px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.18);
+  border-color: rgba(255,255,255,0.28);
+}
+
+/* ── Section heading with white accent underline ─────────────── */
+.section-heading {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 14px;
+}
+.section-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 48px;
+  height: 3px;
+  background: var(--color-accent, #ffffff);
+  border-radius: 2px;
+}
+.section-heading.centered::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ── Eyebrow label ───────────────────────────────────────────── */
+.eyebrow {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.9rem;
+}
+
+/* ── Diagonal section divider ────────────────────────────────── */
+.section-divider {
+  clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+  padding-bottom: 80px;
+}
+
+/* ── Nav frosted glass on scroll ─────────────────────────────── */
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.94) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 2px 24px rgba(0,0,0,0.55) !important;
+  border-bottom-color: rgba(255,255,255,0.07) !important;
+}
+
+/* ── Nav link animated underline ─────────────────────────────── */
+.navbar__links {
+  position: relative;
+}
+.navbar__links::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 1rem;
+  width: calc(100% - 2rem);
+  height: 2px;
+  background: var(--color-accent, #ffffff);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.3s ease;
+}
+.navbar__links:hover::after,
+.navbar__links.active::after {
+  transform: scaleX(1);
+}
+
+/* ── Stats band ──────────────────────────────────────────────── */
+.stats-band {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  padding: 80px 24px;
+  flex-wrap: wrap;
+  background: var(--color-surface, #1a1a1a);
+  border-top: 1px solid var(--color-border, rgba(255,255,255,0.1));
+  border-bottom: 1px solid var(--color-border, rgba(255,255,255,0.1));
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  max-width: 260px;
+}
+
+.stat-number {
+  font-family: var(--font-display, 'Hubot Sans', serif);
+  font-size: clamp(3.5rem, 7vw, 6rem);
+  color: var(--color-accent, #ffffff);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.95rem;
+  color: var(--color-text-muted, #888);
+  line-height: 1.6;
+}
+
+/* ── Footer gradient ─────────────────────────────────────────── */
+.footer__container {
+  background: linear-gradient(to bottom, #0a0a0a, #050505) !important;
+}
+
+/* ── Founders quote block ────────────────────────────────────── */
+.founders-quote {
+  border-left: 4px solid var(--color-accent, #ffffff);
+  padding: 2rem 2.5rem;
+  background: var(--color-surface, #1a1a1a);
+  border-radius: 0 14px 14px 0;
+  font-style: italic;
+  line-height: 1.9;
+  color: var(--color-text, #fff);
+  margin: 2rem 0;
+}
+.founders-quote cite {
+  display: block;
+  margin-top: 1.25rem;
+  font-style: normal;
+  font-size: 0.85rem;
+  color: var(--color-text-muted, #888);
+}
+
+/* ── Visible form labels ─────────────────────────────────────── */
+.form-label {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--color-text-muted, #888);
+  margin-bottom: 5px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+/* ── Barba page wrapper ──────────────────────────────────────── */
+[data-barba="container"] {
+  will-change: opacity, transform;
+}
+
+/* ── Reduced-motion override ─────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .card:hover { transform: none !important; }
+  .section-heading::after { transition: none !important; }
+  .navbar__links::after { transition: none !important; }
+}
+
+/* ── Responsive ──────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .stats-band { gap: 40px; padding: 60px 24px; }
+  .stat-number { font-size: clamp(2.5rem, 10vw, 4rem); }
+  .section-divider { clip-path: none; padding-bottom: 48px; }
+  .founders-quote { padding: 1.5rem 1.25rem; }
+}

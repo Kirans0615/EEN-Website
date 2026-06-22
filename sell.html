@@ -16,8 +16,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hubot+Sans:ital,wght@0,200..900;1,200..900&family=Julius+Sans+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="global-v2.css">
     <link rel="stylesheet" href="SELLstyles.css">
     <script src="https://kit.fontawesome.com/a705a48688.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/2.9.7/barba.umd.min.js"></script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -55,11 +59,12 @@
     </nav>
 
 
-    <main id="main-content">
+    <main id="main-content" data-barba="container" data-barba-namespace="sell">
     <section class="hero-section">
-        <div class="background-image" role="img" aria-label="Sold sign in front of a home" data-higgsfield-prompt="A SOLD sign in front of a beautiful Maryland home, bright daylight, EEN navy and gold branding visible" data-higgsfield-role="hero-background"></div>
+        <div class="background-image hero-bg" role="img" aria-label="Sold sign in front of a home" data-higgsfield-prompt="Close-up of an EEN branded SOLD sign planted in front of a beautiful suburban Maryland home, blue sky, green lawn, triumphant professional mood, real estate photography style" data-higgsfield-role="sell-hero-bg"></div>
         <div class="hero-overlay"></div>
         <div class="overlay-text">
+            <span class="eyebrow">Sell On Your Terms</span>
             <h1>Sell With Us</h1>
             <div class="expanding-line"></div>
         </div>
@@ -68,7 +73,7 @@
     <div class="content-section">
         <div class="item text-image">
             <div class="text">
-                <h2>Fast & Reliable Home Sales</h2>
+                <h2 class="section-heading">Fast & Reliable Home Sales</h2>
                 <p class="description">Experience a hassle-free way to sell your home with Empower Estates Network. We specialize in swift, straightforward transactions, ensuring you get a fair price without the traditional complications of the real estate market.</p>
                 <div class="buttons">
                     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=empowerestatesnet@gmail.com&su=Request for Quote&body=Hello Empower Estates Network!%0D%0A%0D%0AI would like to get a quote on my property: [Insert Address]. Please contact me with more details about the process and what information you need from me.%0D%0A%0D%0A[Name, Phone, Email]" style="text-decoration: none;" target="_blank">
@@ -91,7 +96,7 @@
                 <img src="seahouse.jpg" alt="Waterfront property for sale" loading="lazy" data-higgsfield-prompt="Beautiful waterfront Maryland home exterior, sunny day, professional real estate photo, EEN branded" data-higgsfield-role="content-image">
             </div>
             <div class="text">
-                <h2>Maximizing Your Value</h2>
+                <h2 class="section-heading">Maximizing Your Value</h2>
                 <p>Maximize the value of your property with our efficient, transparent selling process.</p>
                 <div class="buttons">
                     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=empowerestatesnet@gmail.com" style="text-decoration: none;" target="_blank">
@@ -108,7 +113,7 @@
     <section class="why-choose-een">
         <div class="content">
             <div class="text-container" style="background: none;"required>
-                <h2>The EEN Selling Difference</h2>
+                <h2 class="section-heading">The EEN Selling Difference</h2>
                 <p>
                     Discover the EEN Selling Difference—where speed meets simplicity. Our streamlined process ensures you sell your property quickly and at the best possible price, without the usual stress
                 </p>
@@ -119,16 +124,14 @@
     </section>
 
 
-    <div class="stats-container">
-        <div class="stat" id="stat1">
-            <div class="line"></div>
-            <div class="number"><i class="fas fa-house"></i></div>
-            <p>100% Partner and Customer Satisfaction</p>
+    <div class="stats-band section-dark">
+        <div class="stat-item">
+            <span class="stat-number" data-target="100" data-suffix="%">0%</span>
+            <span class="stat-label">Partner and Customer Satisfaction</span>
         </div>
-        <div class="stat" id="stat2">
-            <div class="line"></div>
-            <div class="number"><i class="fas fa-house"></i></div>
-            <p>50% Taskforce of ambitious college students aiming to empower the community one property at a time. </p>
+        <div class="stat-item">
+            <span class="stat-number" data-target="50" data-suffix="%">0%</span>
+            <span class="stat-label">Taskforce of ambitious college students empowering communities one property at a time</span>
         </div>
     </div>
     
@@ -138,7 +141,7 @@
     <section class="why-choose-een">
         <div class="content">
             <div class="text-container" style="background: none;"required>
-                <h2>EEN Seller Resources</h2>
+                <h2 class="section-heading">EEN Seller Resources</h2>
                 <div class="button-container">
                     <a href="https://docs.google.com/presentation/d/1R_hM4NlPL4ifssVp8B454wnAXkiNciMS/edit?usp=sharing&ouid=102100278524607297668&rtpof=true&sd=true" target="_blank">
                         <button style="background-color: #1A1A1A;">Seller Guide</button>
@@ -147,7 +150,7 @@
                 </div>
             </div>
             <div class="image-container2">
-                <img src="signdeal.jpg" alt="Clients signing a real estate deal" loading="lazy" data-higgsfield-prompt="Two clients shaking hands at a desk signing real estate documents, professional office, EEN navy and gold branding" data-higgsfield-role="content-image">
+                <img src="signdeal.jpg" alt="Clients signing a real estate deal" loading="lazy" data-higgsfield-prompt="Overhead flat-lay of a real estate closing — contract document, pen, house keys, and a small house model on a clean wooden desk, warm neutral tones, professional photography" data-higgsfield-role="sell-signing">
             </div>
         </div>
     
@@ -240,6 +243,7 @@
     
         </main>
    <script src="app.js"></script>
-    </body>
+        <script src="animations.js"></script>
+</body>
     </html>
     

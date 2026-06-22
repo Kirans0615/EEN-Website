@@ -15,8 +15,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hubot+Sans:ital,wght@0,200..900;1,200..900&family=Julius+Sans+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="global-v2.css">
     <link rel="stylesheet" href="ABOUTstyles.css">
     <script src="https://kit.fontawesome.com/a705a48688.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/2.9.7/barba.umd.min.js"></script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -53,10 +57,10 @@
         </div>
     </nav>
 
-    <main id="main-content">
+    <main id="main-content" data-barba="container" data-barba-namespace="about">
 
     <section class="hero">
-        <h1>About Empower Estates Network</h1>
+        <h1 class="section-heading">About Empower Estates Network</h1>
         <div class="accent-line"></div>
     </section>
 
@@ -84,16 +88,16 @@
 
     <section class="founders">
         <div class="founders__inner">
-            <h2>Meet Our Founders</h2>
+            <h2 class="section-heading">Meet Our Founders</h2>
             <p>Dream to Reality — A Word From Our Founders</p>
             <div class="founders__grid">
                 <div class="founder-card">
-                    <img src="ale-kiran.jpg" alt="Founders Alessandro Marra and Kiran Sen" loading="lazy" data-higgsfield-prompt="Two professional male co-founders in business casual attire, confident and approachable, modern office background, EEN navy and gold brand colors" data-higgsfield-role="founders-portrait">
+                    <img src="ale-kiran.jpg" alt="Founders Alessandro Marra and Kiran Sen" loading="lazy" data-higgsfield-prompt="Professional headshot of a young real estate entrepreneur in smart business casual attire, confident smile, neutral background, LinkedIn-style portrait" data-higgsfield-role="founder-photo">
                     <div class="founders-text">
                         <h3>Alessandro &amp; Kiran</h3>
                         <p class="role">Co-Founders, Empower Estates Network</p>
-                        <p>At Empower Estates Network (EEN), we share a vision of leadership, innovation, and collaboration. Our mission is not only to build a successful real estate network but also to cultivate an environment where both our team and clients thrive. We believe in treating every team member as part of a unified, collaborative force, where growth and development extend beyond business goals to personal and professional enrichment.</p>
-                        <p style="margin-top:0.8rem;">Our strengths lie in strategic thinking, adaptability, communication, and productivity, allowing us to prioritize tasks efficiently and drive innovation. Beyond real estate transactions, we are passionate about mentorship and education. We actively engage with students, introducing them to real-world experiences by integrating them into our company's workflow through streamlined, impactful tasks.</p>
+                        <blockquote class="founders-quote">At Empower Estates Network (EEN), we share a vision of leadership, innovation, and collaboration. Our mission is not only to build a successful real estate network but also to cultivate an environment where both our team and clients thrive. We believe in treating every team member as part of a unified, collaborative force, where growth and development extend beyond business goals to personal and professional enrichment.
+                        <br><br>Our strengths lie in strategic thinking, adaptability, communication, and productivity, allowing us to prioritize tasks efficiently and drive innovation. Beyond real estate transactions, we are passionate about mentorship and education. We actively engage with students, introducing them to real-world experiences by integrating them into our company's workflow through streamlined, impactful tasks.<cite>— Co-founders, Empower Estates Network</cite></blockquote>
                     </div>
                 </div>
             </div>
@@ -147,5 +151,6 @@
 </div>
 
     <script src="app.js"></script>
+    <script src="animations.js"></script>
 </body>
 </html>

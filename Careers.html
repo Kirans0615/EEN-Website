@@ -14,8 +14,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hubot+Sans:ital,wght@0,200..900;1,200..900&family=Julius+Sans+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="global-v2.css">
     <link rel="stylesheet" href="Careersstyles.css">
     <script src="https://kit.fontawesome.com/a705a48688.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/2.9.7/barba.umd.min.js"></script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -43,7 +47,7 @@
         </div>
     </nav>
 
-    <main id="main-content">
+    <main id="main-content" data-barba="container" data-barba-namespace="careers">
     <!-- HERO -->
     <section class="hero-section">
         <div class="overlay-text">
@@ -99,7 +103,7 @@
 
     <!-- WHY JOIN -->
     <section class="een-careers">
-        <h2>Why Join EEN?</h2>
+        <h2 class="section-heading">Why Join EEN?</h2>
         <ul class="benefits-list">
             <li class="benefit">
                 <button class="benefit-title">Engage in Hands-On Projects <i class="fas fa-chevron-down"></i></button>
@@ -128,7 +132,7 @@
     <section class="why-choose-een">
         <div class="content">
             <div class="text-container">
-                <h2>Career Resources</h2>
+                <h2 class="section-heading">Career Resources</h2>
                 <div class="button-container">
                     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kiran.sen@empowerestatesnet.com&su=Internship Inquiry&body=Hello Empower Estates Network!%0D%0A%0D%0AI would like to learn more about your program...[Message]. Please contact me with more details about the process and what information you need from me.%0D%0A%0D%0A[Name, Phone, Email]" target="_blank">
                         <button>Learn More</button>
@@ -225,5 +229,6 @@
 
     </main>
     <script src="app.js"></script>
+    <script src="animations.js"></script>
 </body>
 </html>
