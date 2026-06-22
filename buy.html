@@ -77,6 +77,7 @@
 
        <!-- Services Section -->
     <div class="services">
+        <h2 class="section-heading centered">Your Home Buying Journey</h2>
         <div class="services__container card-grid">
             <div class="services__card card tilt-card">
                 <h2>Discover Your Next Property</h2>
@@ -216,7 +217,11 @@
     
 
     <section class="een-careers">
-        <h2 class="section-heading">Why Buy From EEN?</h2>
+        <video class="een-careers-video" autoplay muted loop playsinline aria-hidden="true">
+          <source src="een-buy-bg.mp4" type="video/mp4">
+        </video>
+        <div class="een-careers-overlay" aria-hidden="true"></div>
+        <h2 class="section-heading centered">Why Buy From EEN?</h2>
         <ul class="benefits-list">
             <li class="benefit">
                 <button class="benefit-title">Buying Process Simplified  <i class="fas fa-chevron-down"></i></button>
@@ -277,23 +282,19 @@
             <input type="text" id="email" name="email" placeholder="Email" required>
         </div>
         <div class="form-row">
-            <input type="text" id="message" name="message" placeholder="Message" style="height:100px; text-align: start;" required>
+            <textarea id="message" name="message" placeholder="Message" required></textarea>
         </div>
-        
-           <label style="display: flex; align-items: flex-start; gap: 6px; margin-top: 10px; font-size: 0.7em; margin-bottom: 10px; margin-left: 20px;">
-  <input type="checkbox" name="consent_opt_in" required style="margin-top: 2px;">
-  <span>
-    By checking this box and submitting this form, you agree to our
-    <a href="termsofservice.html" target="_blank" style="color: #ffffff; text-decoration: underline;">
-      Terms of Service
-    </a>
-    and
-    <a href="/privacyinformation.html" target="_blank" style="color: #ffffff; text-decoration: underline;">
-      Privacy Rules
-    </a>.
-    You also consent to receive emails, phone calls, and text messages about your inquiry at the contact information you provide.
-  </span>
-</label>
+
+        <label class="consent-label">
+          <input type="checkbox" name="consent_opt_in" required>
+          <span>
+            By checking this box and submitting this form, you agree to our
+            <a href="termsofservice.html" target="_blank">Terms of Service</a>
+            and
+            <a href="/privacyinformation.html" target="_blank">Privacy Rules</a>.
+            You also consent to receive emails, phone calls, and text messages about your inquiry at the contact information you provide.
+          </span>
+        </label>
 
         <button type="submit">Submit</button>
     </form>
