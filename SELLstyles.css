@@ -170,11 +170,10 @@ body, html {
 
 .overlay-text h1 {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 4.5vw, 3.4rem);
-  font-weight: 700;
+  font-size: 4.5rem;
+  font-weight: 400;
   color: white;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
+  margin-bottom: 40px;
 }
 
 .expanding-line {

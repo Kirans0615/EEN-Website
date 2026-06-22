@@ -11,6 +11,13 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    // ── Hero video playback speed ───────────────────────────────
+    const heroVideo = document.querySelector('.hero-video');
+    if (heroVideo) {
+        heroVideo.playbackRate = 2.0;
+        heroVideo.addEventListener('loadedmetadata', () => { heroVideo.playbackRate = 2.0; });
+    }
+
     // ── Dynamic font-weight cycling (hero tagline) ──────────────
     const dynamicSpans = document.querySelectorAll('.dynamic-weight');
     if (dynamicSpans.length) {

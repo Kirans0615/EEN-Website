@@ -9,8 +9,8 @@
   --color-text-muted: #888888;
   --color-border: rgba(255,255,255,0.1);
 
-  --font-display: 'Playfair Display', Georgia, serif;
-  --font-body: 'Inter', system-ui, sans-serif;
+  --font-display: 'Hubot Sans', serif;
+  --font-body: 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Cantarell', 'Helvetica Neue', sans-serif;
 
   --radius-card: 12px;
   --radius-btn: 6px;
