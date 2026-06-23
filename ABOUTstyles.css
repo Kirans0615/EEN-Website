@@ -184,7 +184,8 @@ body, html {
 .about-us-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(0,0,0,0.84) 0%, rgba(0,0,0,0.68) 50%, rgba(0,0,0,0.88) 100%);
+  z-index: 1;
+  background: linear-gradient(135deg, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0.45) 50%, rgba(0,0,0,0.65) 100%);
   pointer-events: none;
 }
 
