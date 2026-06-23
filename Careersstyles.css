@@ -503,11 +503,12 @@ blockquote cite {
     border: none;
     color: var(--text-primary);
     font-family: "Hubot Sans", serif;
-    font-size: clamp(0.9rem, 2.5vw, 1.05rem);
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
     font-weight: 300;
     text-align: left;
     width: 100%;
-    padding: 18px 4px;
+    padding: 40px 4px;
+    min-height: 120px;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -543,7 +544,7 @@ blockquote cite {
 }
 
 .benefit-content {
-    display: block;
+    display: none;
     padding: 14px 4px 40px;
     color: var(--text-muted);
     font-family: var(--font-display);
@@ -552,12 +553,8 @@ blockquote cite {
     max-width: 800px;
 }
 
-.benefit-title::after {
-    display: none;
-}
-
-.benefit-title i {
-    display: none;
+.benefit-title.active + .benefit-content {
+    display: block;
 }
 
 
