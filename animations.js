@@ -158,13 +158,8 @@
     });
   }
 
-  /* ── Hero video playback speed (set in app.js too) ──────── */
-  function initHeroVideo() {
-    document.querySelectorAll('.hero-video').forEach(v => {
-      v.playbackRate = 2.0;
-      v.addEventListener('loadedmetadata', () => { v.playbackRate = 2.0; });
-    });
-  }
+  /* ── Hero video speed — normal, owned by app.js ─────────── */
+  function initHeroVideo() { /* no-op */ }
 
   /* ── Init ───────────────────────────────────────────────── */
   document.addEventListener('DOMContentLoaded', function () {

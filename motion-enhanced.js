@@ -265,13 +265,8 @@
     });
   }
 
-  /* ── Hero video speed (defensive, also in app.js) ─────── */
-  function initHeroVideo() {
-    document.querySelectorAll('.hero-video').forEach(function (v) {
-      v.playbackRate = 2.0;
-      v.addEventListener('loadedmetadata', function () { v.playbackRate = 2.0; });
-    });
-  }
+  /* ── Hero video speed — normal, owned by app.js ─────────── */
+  function initHeroVideo() { /* no-op */ }
 
   /* ── Init ──────────────────────────────────────────────── */
   document.addEventListener('DOMContentLoaded', function () {
