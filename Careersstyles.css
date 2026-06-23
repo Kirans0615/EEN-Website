@@ -471,6 +471,7 @@ blockquote cite {
 }
 
 .een-careers h2 {
+    display: block;
     font-family: var(--font-display);
     color: var(--text-primary);
     font-size: clamp(1.8rem, 3vw, 2.4rem);
@@ -543,11 +544,11 @@ blockquote cite {
 
 .benefit-content {
     display: none;
-    padding: 0 4px 20px;
+    padding: 14px 4px 40px;
     color: var(--text-muted);
     font-family: var(--font-display);
-    font-size: 0.95rem;
-    line-height: 1.7;
+    font-size: 1rem;
+    line-height: 2.0;
     max-width: 800px;
 }
 
@@ -584,12 +585,14 @@ blockquote cite {
 }
 
 .text-container h2 {
+    display: block;
     font-family: var(--font-display);
     font-size: clamp(1.4rem, 3vw, 1.9rem);
     font-weight: 400;
     color: var(--text-primary);
     margin-bottom: 16px;
     text-align: center;
+    width: 100%;
 }
 
 .button-container {
