@@ -543,7 +543,7 @@ blockquote cite {
 }
 
 .benefit-content {
-    display: none;
+    display: block;
     padding: 14px 4px 40px;
     color: var(--text-muted);
     font-family: var(--font-display);
@@ -552,8 +552,12 @@ blockquote cite {
     max-width: 800px;
 }
 
-.benefit-title.active + .benefit-content {
-    display: block;
+.benefit-title::after {
+    display: none;
+}
+
+.benefit-title i {
+    display: none;
 }
 
 
