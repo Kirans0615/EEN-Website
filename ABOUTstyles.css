@@ -186,14 +186,13 @@ body, html {
   object-fit: cover;
   object-position: center;
   z-index: 0;
-  opacity: 0.22;
   pointer-events: none;
 }
 
 .about-us-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.72);
+  background: linear-gradient(135deg, rgba(0,0,0,0.84) 0%, rgba(0,0,0,0.68) 50%, rgba(0,0,0,0.88) 100%);
   z-index: 1;
   pointer-events: none;
 }
