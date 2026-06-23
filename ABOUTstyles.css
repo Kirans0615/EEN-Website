@@ -176,16 +176,23 @@ body, html {
   position: relative;
   overflow: hidden;
   padding: 100px 24px;
+}
+
+.about-us-bg {
+  position: absolute;
+  inset: 0;
   background-image: url('een-about-bg.jpg');
   background-size: cover;
   background-position: center;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .about-us-overlay {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(135deg, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0.45) 50%, rgba(0,0,0,0.65) 100%);
+  background: linear-gradient(135deg, rgba(0,0,0,0.60) 0%, rgba(0,0,0,0.42) 50%, rgba(0,0,0,0.65) 100%);
   pointer-events: none;
 }
 
