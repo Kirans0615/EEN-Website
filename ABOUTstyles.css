@@ -181,7 +181,7 @@ body, html {
 .about-us-bg {
   position: absolute;
   inset: 0;
-  background-image: url('een-about-bg.jpg');
+  background-image: url('een-about-bg.png');
   background-size: cover;
   background-position: center;
   z-index: 0;
