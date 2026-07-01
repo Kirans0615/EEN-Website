@@ -149,7 +149,7 @@ body, html {
 .background-image {
   position: absolute;
   inset: 0;
-  background-image: url("een-hero-buy.png"), linear-gradient(135deg, #111111, #1a1a1a);
+  background-image: url("een-hero-buy.jpg"), linear-gradient(135deg, #111111, #1a1a1a);
   background-size: cover, cover;
   background-position: center, center;
   z-index: 0;

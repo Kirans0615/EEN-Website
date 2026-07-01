@@ -148,7 +148,7 @@ body, html {
 .background-image {
   position: absolute;
   inset: 0;
-  background-image: url("een-hero-sell.png");
+  background-image: url("een-hero-sell.jpg");
   background-size: cover;
   background-position: center;
   z-index: 0;

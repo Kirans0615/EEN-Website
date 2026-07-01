@@ -241,8 +241,13 @@
       form.addEventListener('submit', function (e) {
         e.preventDefault();
         var data = new FormData(form);
-        fetch('/', { method: 'POST', body: data })
-          .then(function () {
+        /* Netlify expects url-encoded bodies unless the form uploads files */
+        var body = form.querySelector('input[type="file"]')
+          ? data
+          : new URLSearchParams(data);
+        fetch('/', { method: 'POST', body: body })
+          .then(function (res) {
+            if (!res.ok) throw new Error('HTTP ' + res.status);
             showToast("Message sent — we'll be in touch shortly!", 'success');
             form.reset();
           })

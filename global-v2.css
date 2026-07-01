@@ -426,3 +426,12 @@ input.input-success, select.input-success {
   .tilt-card { transform: none !important; }
   .marquee-track { animation: none !important; }
 }
+
+/* Nav toggle is a <button> (keyboard accessibility) — strip UA button chrome */
+button.navbar__toggle {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+}

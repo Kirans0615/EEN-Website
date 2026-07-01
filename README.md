@@ -1,29 +1,53 @@
-**EEN Website Launch
+# Empower Estates Network — Website
 
-Install VScode
+Static marketing site for Empower Estates Network LLC, live at
+[empowerestatesnetwork.com](https://empowerestatesnetwork.com).
 
-In your desktop make a folder and title it whatever you want (pref EEN Website)
+## Stack
 
-Launch vscode
+- Plain HTML/CSS/JS — no build step.
+- Hosted on **Netlify**, deployed automatically from the `main` branch of this repo.
+- Contact/lead forms use **Netlify Forms** (`data-netlify="true"`); submissions appear in the Netlify dashboard under Forms.
+- Animations: GSAP 3.12 + ScrollTrigger; carousels: Swiper 11 (both loaded from CDNs with Subresource Integrity hashes).
+- Security headers are configured in `_headers` (Netlify header file).
 
-Open your folder you just made
+## Pages
 
-Insert indexmain.html into a html file inside vscode - title it indexmain.html
+| File | Purpose |
+|------|---------|
+| `index.html` | Home — hero video, featured properties, home-value form |
+| `buy.html` | Buyer services + private-listings contact form |
+| `sell.html` | Seller services + offer form |
+| `Careers.html` | Internships/careers + application form (resume upload) |
+| `about.html` | Founders / company story |
+| `privacyinformation.html`, `termsofservice.html` | Legal |
+| `404.html` | Custom not-found page (picked up automatically by Netlify) |
 
-Insert style.css into css file into vscode - title it style.css
+Shared assets: `variables.css`, `global-v2.css` (site-wide styles), per-page stylesheets,
+`app.js` (nav + basic interactions), `animations.js` (GSAP scroll effects),
+`motion-enhanced.js` (cursor, reveals, Netlify form AJAX + toast).
 
-Repeat the same step with every other file inside the repository and make sure they are titled the same thing after downloading. You should have TWO files for the Home Page, Buy Page, Sell Page, Careers Page, About Page, and Register Function. You should also have the app.js installed as well.
+## Local development
 
-download all the pictures inside PICS and verify the names are the same 
+```bash
+# from the repo root — any static server works
+python3 -m http.server 8000
+# then open http://localhost:8000
+```
 
-Verify you have "Prettier" and "Live Server" installed on Vscode
+Note: Netlify form submissions do not work locally (the POST endpoint only exists on Netlify).
 
-Go into your indexmain.html file right click and select launch with live server
+## Deploying
 
-Launch
+Push to `main` — Netlify builds and deploys automatically.
 
-**Any file with TEST are files for testing not needed for launch of website.
+## Updating CDN libraries
 
-**All these files are subject to change and may not be fully up to date with developer website.
+Script/stylesheet tags for Swiper and GSAP pin exact versions with `integrity` hashes.
+To upgrade, change the version in the URL and regenerate the hash:
 
-© EEN 2025. All Rights Reserved
+```bash
+curl -s <new-cdn-url> | openssl dgst -sha384 -binary | openssl base64 -A
+```
+
+© EEN 2025. All Rights Reserved.
