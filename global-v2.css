@@ -101,6 +101,12 @@
 .navbar__links.active::after {
   transform: scaleX(1);
 }
+/* While hovering anywhere in the nav, only the hovered link shows the
+   underline — the current-page link's underline steps aside instead of
+   staying lit alongside whichever link the user is actually pointing at. */
+.navbar__menu:hover .navbar__links.active:not(:hover)::after {
+  transform: scaleX(0);
+}
 
 /* ── Stats band ──────────────────────────────────────────────── */
 .stats-band {

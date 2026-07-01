@@ -84,6 +84,11 @@ body, html {
   border-bottom: 2px solid var(--color-accent);
 }
 
+.navbar__menu:hover .navbar__links.active:not(:hover) {
+  color: rgba(255,255,255,0.9);
+  border-bottom-color: transparent;
+}
+
 .navbar__btn {
   display: flex;
   justify-content: center;

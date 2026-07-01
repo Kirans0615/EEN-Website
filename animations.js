@@ -5,6 +5,8 @@
 (function () {
   'use strict';
 
+  var REDUCED_MOTION = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   /* ── GSAP setup ──────────────────────────────────────────── */
   if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger);
@@ -14,58 +16,60 @@
       opacity: 0, duration: 0.45, ease: 'power2.out', clearProps: 'opacity'
     });
 
-    /* Scroll reveal: .section-heading */
-    gsap.utils.toArray('.section-heading').forEach(el => {
-      gsap.from(el, {
-        scrollTrigger: {
-          trigger: el,
-          start: 'top 87%',
-          toggleActions: 'play none none none'
-        },
-        opacity: 0,
-        y: 36,
-        duration: 0.75,
-        ease: 'power3.out'
+    /* Scroll-reveal animations start elements at opacity:0 until their
+       ScrollTrigger fires. Reduced-motion users never scroll-trigger
+       anything (their browser/OS disables animations), so these must be
+       skipped entirely rather than created-then-killed — killing a
+       ScrollTrigger does not restore the "from" state it was driving,
+       which left content permanently invisible. */
+    if (!REDUCED_MOTION) {
+      /* Scroll reveal: .section-heading */
+      gsap.utils.toArray('.section-heading').forEach(el => {
+        gsap.from(el, {
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 87%',
+            toggleActions: 'play none none none'
+          },
+          opacity: 0,
+          y: 36,
+          duration: 0.75,
+          ease: 'power3.out'
+        });
       });
-    });
 
-    /* Scroll reveal: .card-grid children with stagger */
-    gsap.utils.toArray('.card-grid').forEach(grid => {
-      const cards = grid.querySelectorAll('.card');
-      if (!cards.length) return;
-      gsap.from(cards, {
-        scrollTrigger: {
-          trigger: grid,
-          start: 'top 82%',
-          toggleActions: 'play none none none'
-        },
-        opacity: 0,
-        y: 56,
-        stagger: 0.11,
-        duration: 0.65,
-        ease: 'power3.out'
+      /* Scroll reveal: .card-grid children with stagger */
+      gsap.utils.toArray('.card-grid').forEach(grid => {
+        const cards = grid.querySelectorAll('.card');
+        if (!cards.length) return;
+        gsap.from(cards, {
+          scrollTrigger: {
+            trigger: grid,
+            start: 'top 82%',
+            toggleActions: 'play none none none'
+          },
+          opacity: 0,
+          y: 56,
+          stagger: 0.11,
+          duration: 0.65,
+          ease: 'power3.out'
+        });
       });
-    });
 
-    /* Parallax on .hero-bg elements */
-    gsap.utils.toArray('.hero-bg').forEach(bg => {
-      const section = bg.closest('section') || bg.parentElement;
-      gsap.to(bg, {
-        scrollTrigger: {
-          trigger: section,
-          start: 'top top',
-          end: 'bottom top',
-          scrub: true
-        },
-        yPercent: 28,
-        ease: 'none'
+      /* Parallax on .hero-bg elements */
+      gsap.utils.toArray('.hero-bg').forEach(bg => {
+        const section = bg.closest('section') || bg.parentElement;
+        gsap.to(bg, {
+          scrollTrigger: {
+            trigger: section,
+            start: 'top top',
+            end: 'bottom top',
+            scrub: true
+          },
+          yPercent: 28,
+          ease: 'none'
+        });
       });
-    });
-
-    /* Reduced-motion: kill all animations */
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      gsap.globalTimeline.timeScale(0);
-      ScrollTrigger.getAll().forEach(st => st.kill());
     }
   }
 

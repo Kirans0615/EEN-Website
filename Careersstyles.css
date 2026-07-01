@@ -97,6 +97,10 @@ body {
     color: var(--accent);
 }
 
+.navbar__menu:hover .navbar__links.active:not(:hover) {
+    color: var(--text-primary);
+}
+
 .navbar__btn {
     display: flex;
     align-items: center;
