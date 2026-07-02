@@ -1,6 +1,6 @@
 /* EEN Design System — Brand Tokens */
 :root {
-  --color-primary: #000000;
+  --color-primary: #131313; /* matches the black baked into the logo PNGs */
   --color-accent: #ffffff;
   --color-accent-light: #cccccc;
   --color-bg: #000000;

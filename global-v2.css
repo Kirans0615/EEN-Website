@@ -74,7 +74,7 @@
 
 /* ── Nav frosted glass on scroll ─────────────────────────────── */
 .navbar.scrolled {
-  background: rgba(0, 0, 0, 0.94) !important;
+  background: rgba(19, 19, 19, 0.94) !important;
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   box-shadow: 0 2px 24px rgba(0,0,0,0.55) !important;
@@ -145,7 +145,8 @@
 
 /* ── Footer gradient ─────────────────────────────────────────── */
 .footer__container {
-  background: linear-gradient(to bottom, #0a0a0a, #050505) !important;
+  /* same black as the navbar and the logo artwork */
+  background: #131313 !important;
 }
 
 /* ── Founders quote block ────────────────────────────────────── */
@@ -203,21 +204,12 @@
    Custom cursor · scroll bar · reveals · tilt · toast
    ============================================================ */
 
-/* ── Custom spring cursor ──────────────────────────────────── */
-@media (hover: hover) and (pointer: fine) {
-  html { cursor: none; }
-  a, button, [role="button"], label, .card, .tilt-card { cursor: none !important; }
-}
-.cursor-dot {
-  position: fixed; top: 0; left: 0;
-  width: 8px; height: 8px;
-  background: #ffffff;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  mix-blend-mode: difference;
-  transform: translate(-100vw, -100vh); /* offscreen until first move */
-}
+/* ── Cursor ring accent ──────────────────────────────────────
+   The native OS cursor is never hidden: hiding it via CSS while
+   the JS replacement is gated on motion/GSAP left some users
+   (e.g. Windows with animations off) with no visible mouse.
+   The ring is a decorative follower behind the real cursor. */
+.cursor-dot { display: none; }
 .cursor-ring {
   position: fixed; top: 0; left: 0;
   width: 40px; height: 40px;

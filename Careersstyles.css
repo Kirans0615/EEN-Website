@@ -39,7 +39,7 @@ body {
    NAVBAR
    ============================================================ */
 .navbar {
-    background: #000000;
+    background: var(--color-primary, #131313);
     height: 72px;
     display: flex;
     justify-content: center;

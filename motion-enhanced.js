@@ -11,12 +11,13 @@
   var REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var TOUCH   = window.matchMedia('(hover: none)').matches;
 
-  /* ── Custom spring cursor ──────────────────────────────── */
+  /* ── Cursor ring accent ─────────────────────────────────── */
+  /* Decorative follower only — the native OS cursor stays visible,
+     so users still have a pointer when this never runs. */
   function initCursor() {
-    if (TOUCH || REDUCED) return;
-    var dot  = document.querySelector('.cursor-dot');
+    if (TOUCH || REDUCED || typeof gsap === 'undefined') return;
     var ring = document.querySelector('.cursor-ring');
-    if (!dot || !ring) return;
+    if (!ring) return;
 
     var rx = window.innerWidth / 2, ry = window.innerHeight / 2;
     var mx = rx, my = ry;
@@ -24,7 +25,6 @@
     document.addEventListener('mousemove', function (e) {
       mx = e.clientX;
       my = e.clientY;
-      gsap.to(dot, { x: mx - 4, y: my - 4, duration: 0.08, ease: 'none' });
     });
 
     (function lerpRing() {
@@ -37,11 +37,9 @@
     document.querySelectorAll('a, button, .card, .tilt-card, [role="button"]').forEach(function (el) {
       el.addEventListener('mouseenter', function () {
         gsap.to(ring, { scale: 1.9, opacity: 0.35, duration: 0.3, ease: 'power2.out' });
-        gsap.to(dot,  { scale: 0,   duration: 0.2 });
       });
       el.addEventListener('mouseleave', function () {
-        gsap.to(ring, { scale: 1,   opacity: 0.65, duration: 0.5, ease: 'elastic.out(1, 0.5)' });
-        gsap.to(dot,  { scale: 1,   duration: 0.35, ease: 'elastic.out(1, 0.5)' });
+        gsap.to(ring, { scale: 1, opacity: 0.65, duration: 0.5, ease: 'elastic.out(1, 0.5)' });
       });
     });
   }
