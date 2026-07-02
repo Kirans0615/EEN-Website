@@ -15,13 +15,14 @@
     <link rel="icon" type="image/x-icon" href="4ucJ4UYa.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hubot+Sans:ital,wght@0,200..900;1,200..900&family=Julius+Sans+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="variables.css">
     <link rel="stylesheet" href="global-v2.css">
     <link rel="stylesheet" href="ABOUTstyles.css">
-    <script src="https://kit.fontawesome.com/a705a48688.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous"></script>
+    <script defer src="https://kit.fontawesome.com/a705a48688.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous"></script>
 </head>
 <body class="has-js">
     <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
@@ -64,7 +65,7 @@
     <main id="main-content" data-barba="container" data-barba-namespace="about">
 
     <div class="about-us">
-        <img src="een-about-bg.jpg" aria-hidden="true" alt="" class="about-us-bg-img">
+        <img src="een-about-bg.jpg" aria-hidden="true" alt="" class="about-us-bg-img" fetchpriority="high" width="1920" height="1086">
         <div class="about-us-overlay" aria-hidden="true"></div>
         <div class="about-us__heading">
             <h1 class="section-heading" data-text-reveal>About Empower Estates Network</h1>
@@ -99,7 +100,7 @@
             <p>Dream to Reality — A Word From Our Founders</p>
             <div class="founders__grid">
                 <div class="founder-card tilt-card">
-                    <img src="ale-kiran.jpg" alt="Founders Alessandro Marra and Kiran Sen" loading="lazy" class="img-reveal">
+                    <img src="ale-kiran.jpg" alt="Founders Alessandro Marra and Kiran Sen" loading="lazy" class="img-reveal" decoding="async" width="545" height="635">
                     <div class="founders-text">
                         <h3>Alessandro &amp; Kiran</h3>
                         <p class="role">Co-Founders, Empower Estates Network</p>
@@ -135,7 +136,7 @@
             <div class="social__media--wrap">
             <div class="footer__logo">
             <a href="/" id="footer__logo">
-                <img src="pic5.PNG" alt="Empower Estates Network" style="height: 50px; width: auto;">
+                <img src="pic5.PNG" alt="Empower Estates Network" style="height: 50px; width: auto;" loading="lazy" decoding="async" width="271" height="83">
                 <span style="display: none;">Empower Estates Network</span>
             </a>
         </div>
@@ -157,8 +158,8 @@
     </div>
 </div>
 
-    <script src="app.js"></script>
-    <script src="animations.js"></script>
-    <script src="motion-enhanced.js"></script>
+    <script defer src="app.js"></script>
+    <script defer src="animations.js"></script>
+    <script defer src="motion-enhanced.js"></script>
 </body>
 </html>

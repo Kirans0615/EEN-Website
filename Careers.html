@@ -15,13 +15,14 @@
     <link rel="icon" type="image/x-icon" href="4ucJ4UYa.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hubot+Sans:ital,wght@0,200..900;1,200..900&family=Julius+Sans+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="variables.css">
     <link rel="stylesheet" href="global-v2.css">
     <link rel="stylesheet" href="Careersstyles.css">
-    <script src="https://kit.fontawesome.com/a705a48688.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous"></script>
+    <script defer src="https://kit.fontawesome.com/a705a48688.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous"></script>
 </head>
 <body class="has-js">
     <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
@@ -55,7 +56,7 @@
     <main id="main-content" data-barba="container" data-barba-namespace="careers">
     <!-- HERO -->
     <section class="hero-section">
-        <video class="hero-video" autoplay muted loop playsinline aria-hidden="true">
+        <video poster="een-careers-bg-poster.jpg" class="hero-video" autoplay muted loop playsinline aria-hidden="true">
             <source src="een-careers-bg.mp4" type="video/mp4">
         </video>
         <div class="hero-overlay" aria-hidden="true"></div>
@@ -152,7 +153,7 @@
                 </div>
             </div>
             <div class="image-container2">
-                <img src="alek.jpg" alt="EEN team member reviewing career resources" loading="lazy">
+                <img src="alek.jpg" alt="EEN team member reviewing career resources" loading="lazy" decoding="async" width="946" height="381">
             </div>
         </div>
     </section>
@@ -224,7 +225,7 @@
             <div class="social__media--wrap">
                 <div class="footer__logo">
                     <a href="/" id="footer__logo">
-                        <img src="pic5.PNG" alt="Empower Estates Network" style="height:50px;width:auto;">
+                        <img src="pic5.PNG" alt="Empower Estates Network" style="height:50px;width:auto;" loading="lazy" decoding="async" width="271" height="83">
                     </a>
                 </div>
                 <p class="website__rights">
@@ -241,8 +242,8 @@
     </footer>
 
     </main>
-    <script src="app.js"></script>
-    <script src="animations.js"></script>
-    <script src="motion-enhanced.js"></script>
+    <script defer src="app.js"></script>
+    <script defer src="animations.js"></script>
+    <script defer src="motion-enhanced.js"></script>
 </body>
 </html>
